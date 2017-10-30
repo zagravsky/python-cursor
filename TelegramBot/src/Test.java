@@ -17,14 +17,19 @@ public class Test {
         switch (cases) {
 
             case "/Понедельник":
-                lesson1=doc.getElementsByAttributeValue("title", "Понеділок 1-а пара");
-                lesson2=doc.getElementsByAttributeValue("title", "Понеділок 2-а пара");
-                lesson3=doc.getElementsByAttributeValue("title", "Понеділок 3-а пара");
-                lesson4=doc.getElementsByAttributeValue("title", "Понеділок 4-а пара");
-                schedule[0]=lesson1.text();
-                schedule[1]=lesson2.text();
-                schedule[2]=lesson3.text();
-                schedule[3]=lesson4.text();
+                for (int i=0;i<7;i++){
+                    String allDay = "Понеділок " + i + "-а пара";
+                    Elements lesson=doc.getElementsByAttributeValue("title", allDay);
+                    schedule[i-1]=lesson.text();
+                }
+//                lesson1=doc.getElementsByAttributeValue("title", "Понеділок 1-а пара");
+//                lesson2=doc.getElementsByAttributeValue("title", "Понеділок 2-а пара");
+//                lesson3=doc.getElementsByAttributeValue("title", "Понеділок 3-а пара");
+//                lesson4=doc.getElementsByAttributeValue("title", "Понеділок 4-а пара");
+//                schedule[0]=lesson1.text();
+//                schedule[1]=lesson2.text();
+//                schedule[2]=lesson3.text();
+//                schedule[3]=lesson4.text();
                 break;
 
             case "/Вторник":
@@ -72,10 +77,10 @@ public class Test {
                 break;
 
             case "/Суббота":
-                lesson1=doc.getElementsByAttributeValue("title", "Понеділок 1-а пара");
-                lesson2=doc.getElementsByAttributeValue("title", "Понеділок 2-а пара");
-                lesson3=doc.getElementsByAttributeValue("title", "Понеділок 3-а пара");
-                lesson4=doc.getElementsByAttributeValue("title", "Понеділок 4-а пара");
+                lesson1=doc.getElementsByAttributeValue("title", "Субота 1-а пара");
+                lesson2=doc.getElementsByAttributeValue("title", "Субота 2-а пара");
+                lesson3=doc.getElementsByAttributeValue("title", "Субота 3-а пара");
+                lesson4=doc.getElementsByAttributeValue("title", "Субота 4-а пара");
                 schedule[0]=lesson1.text();
                 schedule[1]=lesson2.text();
                 schedule[2]=lesson3.text();
@@ -107,7 +112,7 @@ public class Test {
             doc = Jsoup.connect("https://www.rozklad.onaft.edu.ua/guest_n.php?view=g&id=195").get();
             days = doc.getElementsByAttributeValue("class","lesson");
 //            subjects = doc.getElementsByAttributeValue("class" , "predm");
-//            titles = doc.getElementsByAttributeValue("title", "Понеділок 1-а пара");
+            titles = doc.getElementsByAttributeValue("title", "Вівторок 4-а пара");
 
         } catch (IOException e) {
             e.getMessage();
@@ -120,6 +125,12 @@ public class Test {
 
     public static void main(String[] args) {
         Test test = new Test();
-        test.parseHtml();
+//        test.parseHtml();
+        try {
+            test.getMessage("/Понедельник");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 }
