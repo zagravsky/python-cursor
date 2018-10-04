@@ -1,7 +1,5 @@
-
 def func_task5(data: list):
-    list_with_data = []
-    list_with_data.append(sum(list(map(lambda x: x['age'], data))))
-    list_with_data.append(min(data, key=lambda x: x['age']))
-    list_with_data.append(max(data, key=lambda x: x['age']))
-    return list_with_data
+    age_sum = sum(dic['age'] for dic in data)
+    youngest_memb = (min(data, key=lambda x: x['age']))
+    oldest_memb = (max(data, key=lambda x: x['age']))
+    return age_sum, youngest_memb, oldest_memb
