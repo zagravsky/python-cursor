@@ -4,7 +4,6 @@ def convert_dec_roman(inp):
     :param inp: arabian num
     :return: Roman num
     """
-    temp = None
     for k, v in to_roman.items():
         if inp == k:
             return v
