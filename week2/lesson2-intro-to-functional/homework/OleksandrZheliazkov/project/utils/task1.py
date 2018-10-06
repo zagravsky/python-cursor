@@ -1,2 +1,2 @@
-def print_members(members:list):
+def print_members(members: list):
     return members
