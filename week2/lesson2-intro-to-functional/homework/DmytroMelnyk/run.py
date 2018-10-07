@@ -37,4 +37,4 @@ print('\n')
 print('Task 6')
 members_task6 = copy.deepcopy(members)
 print('Task 6 members:', sort_len_name(members_task6))
-
+print('\n')
