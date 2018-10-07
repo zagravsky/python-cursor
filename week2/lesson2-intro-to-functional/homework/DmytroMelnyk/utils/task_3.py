@@ -5,8 +5,9 @@ def filter_and_load(l: list):
     :param l: input list of dict
     :return: changed list
     """
-    list(map(lambda x: x.update({'load': (x['age'])/2}), l))
-    return list(filter((lambda x: x['age'] < 200), l))
+    l = list(filter((lambda x: x['age'] < 200), l))
+    list(map(lambda x: x.update({'load': (x['age']) / 2}), l))
+    return l
 
 
 if __name__ == '__main__':
