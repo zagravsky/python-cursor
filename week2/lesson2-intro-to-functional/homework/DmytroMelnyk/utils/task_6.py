@@ -4,8 +4,8 @@ def sort_len_name(l: list):
     :param l: input list of dict
     :return: sorted list
     """
-    return sorted(l, key=lambda x: x['age']) if min(l, key=lambda x: len(x['name'])) == max(l, key=lambda x: len(
-        x['name'])) else sorted(l, key=lambda x: len(x['name']))
+
+    return sorted(l, key=lambda x: (len(x['name']), (x['age'])))
 
 
 if __name__ == '__main__':
