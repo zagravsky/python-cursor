@@ -7,7 +7,11 @@ def sum_min_max(l: list):
     - The youngest member
     - The oldest member
     """
-    return sum(map(lambda x: x['age'], l)), min(l, key=lambda x: x['age']), max(l, key=lambda x: x['age'])
+    min_l = min(l, key=lambda x: x['age'])
+    max_l = max(l, key=lambda x: x['age'])
+    sum_l = sum(map(lambda x: x['age'], l))
+
+    return sum_l, min_l, max_l
 
 
 if __name__ == '__main__':
