@@ -7,3 +7,4 @@ req = requests.get(link)
 
 with open('image_for_task_3.png', 'wb') as file:
     file.write(req.content)
+	

@@ -14,3 +14,4 @@ if __name__ == "__main__":
     import pprint
     path = 'C:/Users/SancheeZzz/PycharmProjects/CURSOR/SancheeZzz'
     pprint.pprint(dir_and_file(path))
+	
