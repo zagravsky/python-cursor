@@ -33,9 +33,10 @@ group_list = [['Alexandr', 'Klimach', '@klimach'],
                   ['Jenia', 'Trofimenko', '@jeniaTrofimenko'],
                   ['Alina', 'Brygas', None],
                   ['Eugen', None, None]]
-group_dict = [{'First name':a,  'Last name':b,  'Telegram tag':c} for a, b, c in group_list]
+
 file = open('test.csv', 'w')
 fieldname = ['First name', 'Last name', 'Telegram tag']
+group_dict = [dict(zip(fieldname, i)) for i in group_list]
 writer = csv.DictWriter(file, fieldname)
 writer.writeheader()
 writer.writerows(group_dict)
