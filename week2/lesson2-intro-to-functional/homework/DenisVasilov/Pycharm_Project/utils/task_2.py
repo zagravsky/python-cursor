@@ -1,7 +1,5 @@
-def name2uppercase(list_of_members:list):
-    i = 0
-    while i < len(list_of_members):
-        list_of_members[i]['name']=list_of_members[i]['name'].upper()
-        i+=1
+def name2uppercase(list_of_members:list)-> list:
+    for member in list_of_members:
+        member['name']= member['name'].upper()
     return list_of_members
 

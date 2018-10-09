@@ -1,5 +1,4 @@
-def o_include (lst_of_members:list):
-    from re import search
-    lst_of_members=list(filter(lambda i: search(r'o', i['name'].lower()), lst_of_members))
-    return lst_of_members
+def o_include (lst_of_members:list) -> list:
+    return list(filter(lambda x: 'o' in x['name'].lower(), lst_of_members))
+
 
