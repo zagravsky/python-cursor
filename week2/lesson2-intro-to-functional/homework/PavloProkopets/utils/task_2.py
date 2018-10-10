@@ -6,3 +6,4 @@ def func_2(list_2: list) -> list:
 # def func_1_2(members: list) -> list:
 #     return list(map(lambda x: {'age': x['age'], 'name': x['name'].upper()}, members))
 # print (func_1_2(members))
+

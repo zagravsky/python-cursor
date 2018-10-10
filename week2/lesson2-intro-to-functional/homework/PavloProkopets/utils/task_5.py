@@ -9,3 +9,4 @@ def func_5(list_5: list) -> tuple:
 #     age_min = reduce(lambda x, y: x if x['age'] < y['age'] else y, list_4)
 #     age_max = reduce(lambda x, y: x if x['age'] > y['age'] else y, list_4)
 #     return age_sum, age_min, age_max
+
