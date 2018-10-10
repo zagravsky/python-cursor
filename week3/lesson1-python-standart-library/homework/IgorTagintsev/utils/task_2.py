@@ -1,9 +1,8 @@
 import csv
 
-def create_csv(lst: list, file_name: str):
-    with open(file_name + ".csv", 'w', newline='') as csv_file:
-        colums = ['First name', 'Last name', 'Telegram tag']
-        file_writer = csv.writer(csv_file, quoting=csv.QUOTE_ALL)
-        file_writer.writerow(colum for colum in colums)
-        for member in lst:
-            file_writer.writerow(member)
+def create_csv(data: dict):
+    with open('batman.csv', 'w') as csv_file:
+        columns = ['First name', 'Last name', 'Telegram tag']
+        writer = csv.DictWriter(csv_file, fieldnames=columns)
+        writer.writeheader()
+        writer.writerows(data)
