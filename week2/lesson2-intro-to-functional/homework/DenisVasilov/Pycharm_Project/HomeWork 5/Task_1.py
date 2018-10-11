@@ -1,5 +1,6 @@
 import os
 
+
 def dir_and_file(user_path: str) -> list:
     tree = []
     for dir_path, dir_names, file_names in os.walk(user_path):
@@ -11,7 +12,10 @@ def dir_and_file(user_path: str) -> list:
             tree.append(sub_tab + file)
     return tree
 if __name__ == "__main__":
+
+
     import pprint
+
+
     path = 'C:/Users/SancheeZzz/PycharmProjects/CURSOR/SancheeZzz'
     pprint.pprint(dir_and_file(path))
-	

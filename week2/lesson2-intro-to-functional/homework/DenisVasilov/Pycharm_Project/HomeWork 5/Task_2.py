@@ -1,12 +1,13 @@
 import csv
+
+
 def create_csv (stud_list:list, doc_name:str):
     with open(doc_name + ".csv", 'w', newline='') as csv_file:
         file_writer = csv.writer(csv_file, quoting=csv.QUOTE_ALL)
-        for stud in stud_list:
-            file_writer.writerow(stud)
-
+        file_writer.writerows(stud_list)
 
 if __name__ == '__main__':
+
 	group_list = [['Alexandr', 'Klimach', '@klimach'],
 	['Alexander', 'Kozhokar', '@hey_alex'],
 	['Viktor', 'B.', '@sancheezzz'],
@@ -40,4 +41,5 @@ if __name__ == '__main__':
 	['Jenia', 'Trofimenko', '@jeniaTrofimenko'],
 	['Alina', 'Brygas', None],
 	['Eugen', None, None]]
+
 	create_csv(group_list,"Csv_task_2")
