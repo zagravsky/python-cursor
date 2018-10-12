@@ -1,6 +1,6 @@
 import os
 
-mypath = '/home/silver/Desktop/HW/hw_l3_1/'
+mypath = '/home/silver/Desktop/HW/python-cursor/week3/'
 
 def print_all(path):
     for d in os.listdir(path):
