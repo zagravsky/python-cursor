@@ -1,6 +1,4 @@
 # Task 1
-
-
 class Developer:
     def __init__(self, years_experience: int, name: str, language: str):
         self.years_experience = years_experience
@@ -71,7 +69,6 @@ if __name__ == '__main__':
 
 
 # Task 2
-# E -> D -> B -> D -> C -> A
 class A:
     pass
 
@@ -95,6 +92,8 @@ class E(D, B):
 if __name__ == '__main__':
     print(E.__mro__)
 
+# (<class '__main__.E'>, <class '__main__.D'>, <class '__main__.C'>,
+#  <class '__main__.B'>, <class '__main__.A'>, <class 'object'>)
 
 # Task 3
 
