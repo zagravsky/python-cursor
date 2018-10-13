@@ -3,6 +3,9 @@ from task2 import*
 from task3 import*
 
 # Task 1
+
+
+print("Task 1")
 dev = Developer("Vasyl", 6)
 devPython = PythonDeveloper("Ruslan", 0)
 devJava = JavaDeveloper("Tony", 10)
@@ -31,14 +34,19 @@ print(f"\n----------------------------------\n"
 
 # Task 2
 
-print(E.mro())
 
+print("Task 2\n")
+print(E.mro())
+print("\n")
 # Task 3
 
-def dev_add(IT_comp, dataWithDev:list):
-    for dev in dataWithDev:
-        IT_comp += dev
-    return IT_comp
+
+print("Task 3\n")
+def dev_add(ITcomp, dataWithDev:list):
+    for d in dataWithDev:
+        ITcomp += d
+    return ITcomp
+
 
 dev1 = PythonDeveloper('Vasya', 4)
 dev2 = PythonDeveloper('Tony', 6)
@@ -50,8 +58,9 @@ dev7 = RubyDeveloper('Vitya', 1)
 dev8 = RubyDeveloper('Oleksa', 6)
 dev9 = RubyDeveloper('John', 12)
 
-company = IT_company()
+company = ITcompany()
 dev_add(company, [dev1, dev2, dev3, dev4, dev5, dev6, dev7, dev8, dev9])
 company.sorting()
-company.removeDev('Vasya')
+print(company)
+company.remove_dev('Vasya')
 print(company)

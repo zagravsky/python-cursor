@@ -1,6 +1,7 @@
 
 
-class IT_company():
+class ITcompany:
+
     employees = []
 
     def __add__(self, developer):
@@ -11,20 +12,19 @@ class IT_company():
         return self
     
     def __str__(self):
-        listOfEmployees = ""       
+        list_of_employees = ""
         for developer in self.employees:
-            listOfEmployees += f"{developer.name} - {developer.years_experience} years, {developer.language}\n"
-        return listOfEmployees
+            list_of_employees += f"{developer.name} - {developer.years_experience} years, {developer.language}\n"
+        return list_of_employees
 
     def sorting(self):
-        return self.employees.sort(key=lambda developer: developer.years_experience, reverse = True)
+        return self.employees.sort(key=lambda developer: developer.years_experience, reverse=True)
         
-    def removeDev(self, name:str):
-        # Метод removeDev видаляє працівників, але якщо буде декілька розробників із однаковим ім'я,
-        #  то видалить обох. Не можу зрозуміти як правильно написати код, тому як є так є))))) 
+    def remove_dev(self, name: str):
         for developer in self.employees:
             if name is developer.name:
                 self.employees.remove(developer)
+                print(f"Developer {name} was removed")
+                return self
+        print(f"Developer not found")
         return self
-
-
