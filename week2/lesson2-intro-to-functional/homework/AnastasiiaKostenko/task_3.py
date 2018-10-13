@@ -5,7 +5,7 @@ def load_key_to_dict(members:list):
         load=int(i['age']*100/200)
         new_key={"load":load}
         i.update(new_key)
-    print(members)
+    return members
 
-load_key_to_dict(members)
+print(load_key_to_dict(members))
 

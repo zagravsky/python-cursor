@@ -9,5 +9,3 @@ members = [
   {'age': 55, 'name': 'Frank'},
   {'age': 83, 'name': 'Homer'}
 ]
-
-print(members)
