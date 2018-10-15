@@ -16,10 +16,12 @@ class Developer():
         print('I am a developer and I write code')
 
     def __call__(self):
-        return 'I use Python to write code'
+        return self.write_code()
 
     def __str__(self):
-        return '{name} - {years_experience} years, {language}'.format(name=self.name, years_experience=self.years_experience, language=self.language)
+        return '{name} - {years_experience} years, {language}'.format(name=self.name,
+                                                                      years_experience=self.years_experience,
+                                                                      language=self.language)
 
 
 class PythonDeveloper(Developer):
