@@ -9,9 +9,9 @@ class it_company():
         return self
 
     def __str__(self):
-        stroka = ''
-        spisok_strok = ['\n' + str(x) for x in sorted(self.dev_list, key=lambda x: x.years_experience)]
-        return stroka.join(y for y in spisok_strok)
+        string = ''
+        list_string_sort = ['\n' + str(x) for x in sorted(self.dev_list, key=lambda x: x.years_experience)]
+        return string.join(list_string_sort)
 
     def __len__(self):
         return len(self.dev_list)
