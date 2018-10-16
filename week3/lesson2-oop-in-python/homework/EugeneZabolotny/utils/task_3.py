@@ -1,13 +1,15 @@
-from typing import List, Dict, Any, Union
+from typing import List, Dict, Any
+from task_1 import Developer
 
 
 class Team:
     def __init__(self):
         self.team: List[Dict[str, Any]] = []
 
-    def hire_employees(self, *args: Dict[str, Union[str, int]]) -> None:
+    def hire_employees(self, *args: Developer) -> None:
         print('Hiring:')
         for applicant in args:
+            applicant = vars(applicant)
             if applicant['years_experience'] < 3:
                 print(f"!! Experience of {applicant['name']} is not enough")
             else:
@@ -33,6 +35,7 @@ class Team:
                 if employee['name'] in dismission_list:
                     self.team.remove(employee)
                     dismission_list.remove(employee['name'])
+                    print(f"{employee['name']} dismissed")
         else:
             print('No employees')
 
@@ -45,7 +48,10 @@ if __name__ == '__main__':
     rb = RubyDeveloper('Rubyista', 2)
 
     new_team = Team()
-    new_team.hire_employees(vars(py), vars(py), vars(ja), vars(rb)); print()
-    new_team.print_employees(); print()
-    new_team.dismiss_employees('Pythonista', 'Javista', 'Golangista'); print()
+    new_team.hire_employees(py, py, ja, rb)
+    print()
+    new_team.print_employees()
+    print()
+    new_team.dismiss_employees('Pythonista', 'Javista', 'Golangista')
+    print()
     new_team.print_employees()

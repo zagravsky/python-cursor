@@ -17,7 +17,10 @@ if __name__ == "__main__":
 
     print('==== TASK 3 ====')
     new_team = Team()
-    new_team.hire_employees(vars(py), vars(py), vars(ja), vars(rb)); print()
-    new_team.print_employees(); print()
-    new_team.dismiss_employees('Pythonista', 'Javista', 'Golangista'); print()
+    new_team.hire_employees(py, py, ja, rb)
+    print()
+    new_team.print_employees()
+    print()
+    new_team.dismiss_employees('Pythonista', 'Javista', 'Golangista')
+    print()
     new_team.print_employees()
