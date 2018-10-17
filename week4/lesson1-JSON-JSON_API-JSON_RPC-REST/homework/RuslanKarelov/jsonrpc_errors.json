@@ -1,0 +1,8 @@
+{
+    "Parse error": {"code": -32700, "message": "Parse error"},
+    "Invalid request": {"code": -32600, "message": "Invlid request"},
+    "Method not found": {"code": -32601, "message": "Method not found"},
+    "Invalid params": {"code": -32602, "message": "Invalid params"},
+    "Internal error": {"code": -32603, "message": "Internal error"},
+    "Server error": {"code": -32000, "message": "Server error"}
+}
