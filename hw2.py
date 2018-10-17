@@ -1,25 +1,22 @@
-
-def changenum():
-	my_list = []
+def changenum ():
+	mylist = []
 	for i in range(1,31):
 		b = list(map(int,str(i)))
-		c = ''
 		if len(list(b))==1:
 			if i%3==0:
-				c = "Buzz"
+				mylist.append("Buzz")
 			elif i%5==0:
-				c = "Fuzz"
+				mylist.append("Fuzz")
 			else:
-				c = str(i)
+				mylist.append(i)
 		else:
 			if i%3==0 and i%5==0:
-				c = "BuzzFuzz"
+				mylist.append("BuzzFuzz")
 			elif i%3==0:
-				c = "Buzz"
+				mylist.append("Buzz")
 			elif i%5==0:
-				c = "Fuzz"
+				mylist.append("Fuzz")
 			else:
-				c = str(i)
-		my_list.append(c)
-	return my_list
+				mylist.append(i)
+	return mylist
 print(changenum ())
