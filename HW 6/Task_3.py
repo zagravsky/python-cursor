@@ -21,9 +21,8 @@ class IT_company:
             if dev.name == name_of_dev:
                 self.developers.remove(dev)
                 return print("{name} was fired.".format(name=name_of_dev))
+
         return print("We don't have this employee!")
-
-
 
 
 if __name__ == '__main__':
