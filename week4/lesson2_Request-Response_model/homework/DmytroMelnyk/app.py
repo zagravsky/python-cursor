@@ -2,6 +2,7 @@ from flask import Flask
 import random
 
 app = Flask(__name__)
+
 DEVELOPERS = {
     "Poroshenko": {"first_name": "Petro", "last_name": "Poroshenko", "programming_language": "Java"},
     "Groyisman": {"first_name": "Vova", "last_name": "Groyisman", "programming_language": "Ruby"},
@@ -17,7 +18,7 @@ class Developer:
         self.programming_language = programming_language
 
     def __str__(self):
-        return
+        return f'{self.first_name} {self.last_name} - {self.programming_language}'
 
 
 @app.route('/')
