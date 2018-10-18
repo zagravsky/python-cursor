@@ -10,7 +10,6 @@ jsonrpc = {
 
 try:
     my_req = requests.post(' http://127.0.0.1:4001/', data=json.dumps(jsonrpc))
-    print(my_req.text)
-    print("200 OK")
+    print(my_req.status_code)
 except requests.exceptions.ConnectionError:
     print("500 Internal Server Error") 
