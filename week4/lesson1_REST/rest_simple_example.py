@@ -19,7 +19,7 @@ def check_member(name: str) -> bool:
 
 @app.route('/user', methods=['POST'])
 @app.route('/user/<name>', methods=['GET', 'PATCH', 'DELETE'])
-def profile(name: str):
+def profile(name=None):
     result = {}
 
     if flask.request.method == 'POST':
