@@ -6,7 +6,6 @@ with open('group_members.csv', 'r') as csv_file:
 
     with open('new_member_file.csv', 'w', newline = '') as csv_new_file:
 
-
         csv_writer = csv.DictWriter(csv_new_file, fieldnames = 
 fieldnames, delimiter='\t')
 
