@@ -14,7 +14,7 @@ members = [
   {'age': 230, 'name': 'Batman'},
   {'age': 37, 'name': 'Claus'},
   {'age': 55, 'name': 'Frank'},
-  {'age': 83, 'name': 'Homer'}
+  {'age': 83, 'name': 'Homer'},
 ]
 
 if __name__ == "__main__":

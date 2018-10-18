@@ -7,7 +7,8 @@ dir2create = ['demo_dir1', 'demo_dir2/demo_dir3', 'demo_dir4/demo_dir5/demo_dir6
 file2create = ['file1.txt', 'file2.xml', 'file3.jpeg', 'file4.sh', 'file5.pdf']
 
 # list of members for task2
-group_members = [{'First name': 'Alexandr', 'Last name': 'Klimach', 'Telegram tag': '@klimach'},
+group_members = [
+                  {'First name': 'Alexandr', 'Last name': 'Klimach', 'Telegram tag': '@klimach'},
                   {'First name': 'Alexander', 'Last name': 'Kozhokar', 'Telegram tag': '@hey_alex'},
                   {'First name': 'Viktor', 'Last name': 'B.', 'Telegram tag': '@sancheezzz'},
                   {'First name': 'Roman', 'Last name': 'Rodomansky', 'Telegram tag': '@romanrodomansky'},
@@ -17,7 +18,8 @@ group_members = [{'First name': 'Alexandr', 'Last name': 'Klimach', 'Telegram ta
                   {'First name': 'Ostap', 'Last name': 'Rodomansky', 'Telegram tag': '@ostap_rodomansky'},
                   {'First name': 'Igor', 'Last name': 'Tagintsev', 'Telegram tag': '@Ingvar1390'},
                   {'First name': 'Maxim', 'Last name': 'Poleshko', 'Telegram tag': '@Maxsim_P'},
-                  {'First name': 'Misha', 'Last name': 'Antonkin', 'Telegram tag': '@Cosmander'}]
+                  {'First name': 'Misha', 'Last name': 'Antonkin', 'Telegram tag': '@Cosmander'},
+                ]
 
 
 if __name__ == "__main__":
