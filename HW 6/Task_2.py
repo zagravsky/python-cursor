@@ -15,5 +15,4 @@ class E(D, B):
 
 if __name__ == '__main__':
     print(E.mro())
-
-
+#

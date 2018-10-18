@@ -44,4 +44,4 @@ if __name__ == '__main__':
     company.dev_fire('Mihail')
     print("After party")
     print(company)
-
+#
