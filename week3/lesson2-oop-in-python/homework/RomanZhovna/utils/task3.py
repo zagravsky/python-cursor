@@ -12,7 +12,6 @@ class Employees:
         return self
 
     def print_employee(self):
-        # sorted_employee = sorted(self.employee_list, key=lambda x: x.years_experience)
         for empl in sorted(self.employee_list, key=lambda x: x.years_experience):
             print(f"{empl.name} - {empl.years_experience} years, {empl.language}")
 
@@ -32,12 +31,9 @@ class Employees:
             else:
                 self.employee_list.remove(list2analize[i])
 
-        if len(list2analize) == 0:
+        if not list2analize:
             print(f"Employee with name - {name2del} not found")
-
-        for empl in list2analize:
-            if len(list2analize) == 1:
-                self.employee_list.remove(empl)
-            else:
-                fire_multi_emp()
-                break
+        elif len(list2analize) == 1:
+            self.employee_list.remove(list2analize[0])
+        else:
+            fire_multi_emp()
