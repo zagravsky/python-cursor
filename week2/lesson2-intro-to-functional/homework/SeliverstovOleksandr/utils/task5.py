@@ -1,4 +1,6 @@
 def return_summary(members: list):
-    return (sum([x.get('age') for x in members]),
-        min(members, key=lambda x: x.get('age')),
-        max(members, key=lambda x: x.get('age')))
+    sum_of_ages = sum([x.get('age') for x in members])
+    min_age = min(members, key=lambda x: x.get('age'))
+    max_age = max(members, key=lambda x: x.get('age'))
+
+    return (sum_of_ages, min_age, max_age)
