@@ -1,0 +1,6 @@
+{
+    "host": "localhost",
+    "port0": "4000",
+    "port1": "4001",
+    "debug_mode": "True"
+}
