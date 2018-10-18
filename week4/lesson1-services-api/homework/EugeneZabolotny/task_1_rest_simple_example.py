@@ -54,7 +54,7 @@ def profiles():
     if request.method == 'GET':
         with open('members.json', 'w') as outfile:
             json.dump(MEMBERS, outfile, indent=4)
-    result = {"status": "Ok", "message": f"All members is dumped"}
+    result = {"status": "Ok", "message": f"All members are dumped"}
     return json.dumps(result)
 
 
