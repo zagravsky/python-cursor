@@ -9,7 +9,6 @@ jsonrpc_req = {
 }
 try:
     my_req = requests.post(' http://127.0.0.1:4000/', data=json.dumps(jsonrpc_req))
-    print(my_req.text)
-    print("Server is alive")
+    print(f"Your response: {my_req.text}.\nMessage: 'Server is alive'")
 except requests.exceptions.ConnectionError:
-    print("Server is dead")
+    print("Message: 'Server is dead'")

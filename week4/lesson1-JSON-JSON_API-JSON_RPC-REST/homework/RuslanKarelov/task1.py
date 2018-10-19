@@ -54,7 +54,6 @@ def json_file_with_data():
     if request.method == 'POST':
         with open('DataOfMembers.json', 'w') as file:
             json.dump(MEMBERS, file)
-            file.close()
     return f"You create database"
 
 

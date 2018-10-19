@@ -10,7 +10,9 @@ MEMBERS = {
 }
 
 
-ERRORS = json.load(open('jsonrpc_errors.json', 'r'))
+file_with_errors = open('jsonrpc_errors.json', 'r')
+ERRORS = json.load(file_with_errors)
+file_with_errors.close()
 
 
 def succses_valid_response(result):
@@ -34,8 +36,8 @@ def add_member(name, age, gender):
 def get_member(name):
     member = MEMBERS.get(name)
     if member is None:
-        error = f"Your member {name} does not exist"
-        return error_valid_response(error)
+        result = f"Your member {name} does not exist"
+        return error_valid_response(result)
     else:
         result = f"We found your member {MEMBERS[name]}"
         return succses_valid_response(result)
@@ -51,7 +53,6 @@ METHODS = {
 def handle():
     data = json.loads(request.data.decode('utf-8'))
     method_view = METHODS.get(data.get('method'))
-
     if not method_view:
         return error_valid_response(ERRORS["Method not found"])
 
