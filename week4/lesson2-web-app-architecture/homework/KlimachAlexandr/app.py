@@ -29,6 +29,6 @@ def developer_controller():
 def remove_developer():
     if len(developers_list) > 1:
         developers_list.pop()
-        return '\n'.join([str(f"{d['f_name']} {d['l_name']} - {d['p_lang']}") for d in developers_list])
+        return '<br>'.join([str(f"{d['f_name']} {d['l_name']} - {d['p_lang']}") for d in developers_list])
     else:
         return 'List of dev is empty'
