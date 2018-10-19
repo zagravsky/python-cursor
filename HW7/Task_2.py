@@ -27,9 +27,16 @@ def response(result):
     return json.dumps(response_data)
 
 
+
 @app.route ('/ping', methods=['POST'])
 def ping():
-    return response('I\'m okay')
+    data = json.loads(request.data.decode('utf-8'))
+    print(data.get('method'))
+    if data.get('method') != 'ping':
+        return json.dumps({"error": {"code": -32601, "message": "Method not found"}})
+
+    result = {"jsonrpc": "2.0", "result": "I\'m okay"}
+    return json.dumps(result)
 
 METHODS = {
     "addMember": add_member,
@@ -50,5 +57,7 @@ def handle():
 
 
 if __name__ == '__main__':
-    settings = json.load(open("settings.json", "r"))
+    with open('settings.json') as file:
+        settings = json.load(file)
+
     app.run(port=settings['port2'], host=settings['host'], debug=settings['debug'])

@@ -16,8 +16,10 @@ def send_request(source):
         print(requests.post(source, json=addMember).json())
         print("---Get Dvoeshnik---")
         print(requests.post(source, json=getMember).json())
+
 if __name__ == '__main__':
     import json
-    settings = json.load(open("settings.json", "r"))
+    with open('settings.json') as file:
+        settings = json.load(file)
     url = f"http://{settings['host']}:{settings['port2']}/"
     send_request(url)
