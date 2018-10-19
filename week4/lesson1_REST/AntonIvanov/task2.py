@@ -63,5 +63,6 @@ def handle():
 
 
 if __name__ == '__main__':
-    serv_settings = json.load(open("settings.json", "r"))
+    with open("settings.json", "r") as f:
+        serv_settings = json.load(f)
     app.run(**serv_settings)

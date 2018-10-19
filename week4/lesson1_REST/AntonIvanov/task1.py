@@ -53,10 +53,12 @@ def profile(name=None):
 
 @app.route('/memberlist',methods=['GET'])
 def get_members_list():
-    json.dump(MEMBERS,open('member_list.json', 'w'))
+    with open('member_list.json', 'w') as f:
+        json.dump(MEMBERS, f)
     result = {"status": "OK", "message": "member_list.json created"}
     return json.dumps(result)
 
 if __name__ == '__main__':
-    serv_settings = json.load(open("settings.json", "r"))
+    with open("settings.json", "r") as f:
+        serv_settings = json.load(f)
     app.run(**serv_settings)
