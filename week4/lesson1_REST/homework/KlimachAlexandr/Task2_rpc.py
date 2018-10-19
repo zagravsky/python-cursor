@@ -10,6 +10,12 @@ MEMBERS = {
 }
 
 
+def response(result):
+    response_data = {"jsonrpc": "2.0"}
+    response_data['result'] = result
+    return json.dumps(response_data)
+
+
 def add_member(name, age, gender):
     MEMBERS[name] = {"age": age, "name": name, "gender": gender}
     result = f'We add your member {MEMBERS[name]}'
@@ -17,26 +23,20 @@ def add_member(name, age, gender):
 
 
 def get_member(name):
-    member = MEMBERS.get(name)
-    print(name)
-    print(member)
-    if name == member['name']:
-        result = MEMBERS[name]
-    else:
-        result = {"code": -32602, "message": "Invalid params"}
-    return response(result)
+    result = MEMBERS.get(name)
+    if result is not None:
+        return response(result)
+    return json.dumps({"error": {"code": -32602, "message": "Invalid params"}})
 
 
-def response(result):
-    response_data = {"jsonrpc": "2.0"}
-    response_data['result'] = result
-    return json.dumps(response_data)
+def ping(pong):
+    return response(pong)
 
 
 METHODS = {
     "getMember": get_member,
     "addMember": add_member,
-    "response": response
+    "ping": ping
 }
 
 
@@ -53,6 +53,10 @@ def handle():
 
 @app.route('/ping', methods=['POST'])
 def ping():
+    data = json.loads(request.data.decode('utf-8'))
+    method_view = METHODS.get(data.get('method'))
+    if not method_view:
+        return json.dumps({"error": {"code": -32601, "message": "Method not found"}})
     return response('pong')
 
 

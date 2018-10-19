@@ -1,15 +1,15 @@
 import requests
 
+ping = {"jsonrpc": "2.0", "method": "ping"}
 
-def ping(arg):
+
+def check(server):
     try:
-        req = requests.post(arg)
-        if req.status_code == 200:
-            return "Server work"
-    except:
-        return "Server not work"
+        print(requests.post(server, json=ping).json())
+    except requests.exceptions.ConnectionError:
+        print('Server not work')
 
 
 if __name__ == "__main__":
     url = 'http://127.0.0.1:4000/ping'
-    print(ping(url))
+    check(url)
