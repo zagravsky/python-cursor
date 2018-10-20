@@ -1,9 +1,3 @@
-from Task_1 import members
-
-print(members)
-
-members = sorted(sorted(members,
-                        key=(lambda x: x['name'])),
-                 key=(lambda x: x['age']))
-
-print(members)
+def sort_members(members):
+    members_sorted = sorted(members, key=lambda x: (len(x['name']), x['age']))
+    return members_sorted

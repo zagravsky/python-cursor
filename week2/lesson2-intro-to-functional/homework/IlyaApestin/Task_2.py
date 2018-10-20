@@ -1,9 +1,5 @@
-from Task_1 import members
-
-print(members)
-
-members = list(map(lambda a: {'age': a['age'],
-                              'name': a['name'].upper()},
-                   members))
-
-print(members)
+def upper_name(members):
+    members_upper = list(map(lambda a: {'age': a['age'],
+                                  'name': a['name'].upper()},
+                       members))
+    return members_upper

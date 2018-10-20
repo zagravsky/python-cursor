@@ -12,7 +12,3 @@ def arab_to_rom(number):
             number -= value
             roman_numerals += numeral
     return roman_numerals
-
-print(arab_to_rom(121))
-print(arab_to_rom(3555))
-print(arab_to_rom(499))

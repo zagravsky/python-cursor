@@ -1,10 +1,8 @@
-from Task_1 import members
-
-print(members)
-
-members = list(map(lambda a: {'age': a['age'] < 200,
+def load_und_200(members):
+    members_load = list(filter(lambda x: x['age'] < 200,
+                               members))
+    members_load = list(map(lambda a: {'age': a['age'],
                               'name': a['name'],
                               'load': a['age']/2},
-                   members))
-
-print(members)
+                            members_load))
+    return members_load
