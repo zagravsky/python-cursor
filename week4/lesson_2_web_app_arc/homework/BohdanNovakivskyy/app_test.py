@@ -17,8 +17,8 @@ class Developer:
         self.programming_language = programming_language
 
     def __str__(self):
-        # return f'{self.first_name} {self.last_name} - {self.programming_language}'
-        return '{} {} - {}'.format(self.first_name, self.last_name, self.programming_language)
+        return f'{self.first_name} {self.last_name} - {self.programming_language}'
+
 
 @app.route('/')
 def developer_controller():
@@ -30,10 +30,6 @@ def developer_controller():
 def remove_developer():
     if len(developers):
         developers.pop()
-        return get_list_dev()
+        return developers
     else:
         return 'No developers in list'
-
-def get_list_dev():
-    for dev in developers:
-        return '{} {} - {}'.format(dev['first_name'], dev['last_name'], dev['programming_language'])
