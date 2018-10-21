@@ -25,9 +25,7 @@ dev_list.append(kenneth)
 
 
 def output_list():
-    return '<br>'.join([str(f"{d.first_name} "
-                            f"{d.last_name} - "
-                            f"{d.programming_language}") for d in dev_list])
+    return '<br>'.join([str(d) for d in dev_list])
 
 
 @app.route('/')
