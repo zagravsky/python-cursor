@@ -7,8 +7,10 @@
     <list default="true" id="ef027295-e034-4d00-b1f4-462af8654ea3" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/week4/lesson_2_web_app_arc/homework/BohdanNovakivskyy/app.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/week4/lesson_2_web_app_arc/homework/BohdanNovakivskyy/app_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_6.py" beforeDir="false" afterPath="$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_6.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_7.py" beforeDir="false" afterPath="$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_7.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,45 +37,50 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="73" />
-          <entry key="py" value="4997" />
+          <entry key="py" value="5008" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="5070" />
+          <entry key="Python" value="5081" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="18" />
+          <entry key="py" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="18" />
+          <entry key="Python" value="21" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/week4/lesson_2_web_app_arc/homework/BohdanNovakivskyy/app.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/run.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="15" column="34" lean-forward="true" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+            <state relative-caret-position="190">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/week4/lesson_2_web_app_arc/homework/BohdanNovakivskyy/app_test.py">
+        <entry file="file://$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_6.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
-              <caret line="18" column="10" selection-end-line="39" />
+            <state relative-caret-position="57">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_7.py">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -86,7 +93,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/week4/lesson_2_web_app_arc/homework/BohdanNovakivskyy" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -98,11 +105,11 @@
         <option value="$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_4.py" />
         <option value="$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_1.py" />
         <option value="$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_5.py" />
-        <option value="$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_7.py" />
-        <option value="$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_6.py" />
         <option value="$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/run.py" />
         <option value="$PROJECT_DIR$/week4/lesson_2_web_app_arc/homework/BohdanNovakivskyy/app_test.py" />
         <option value="$PROJECT_DIR$/week4/lesson_2_web_app_arc/homework/BohdanNovakivskyy/app.py" />
+        <option value="$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_6.py" />
+        <option value="$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_7.py" />
       </list>
     </option>
   </component>
@@ -126,6 +133,32 @@
             <path>
               <item name="python-cursor" type="b2602c69:ProjectViewProjectNode" />
               <item name="python-cursor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python-cursor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python-cursor" type="462c0819:PsiDirectoryNode" />
+              <item name="week2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python-cursor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python-cursor" type="462c0819:PsiDirectoryNode" />
+              <item name="week2" type="462c0819:PsiDirectoryNode" />
+              <item name="lesson2-intro-to-functional" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python-cursor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python-cursor" type="462c0819:PsiDirectoryNode" />
+              <item name="week2" type="462c0819:PsiDirectoryNode" />
+              <item name="lesson2-intro-to-functional" type="462c0819:PsiDirectoryNode" />
+              <item name="homework" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python-cursor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python-cursor" type="462c0819:PsiDirectoryNode" />
+              <item name="week2" type="462c0819:PsiDirectoryNode" />
+              <item name="lesson2-intro-to-functional" type="462c0819:PsiDirectoryNode" />
+              <item name="homework" type="462c0819:PsiDirectoryNode" />
+              <item name="BohdanNovakivskyy" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="python-cursor" type="b2602c69:ProjectViewProjectNode" />
@@ -176,7 +209,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.app">
+  <component name="RunManager" selected="Python.run">
     <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="python-cursor" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -313,8 +346,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.app" />
         <item itemvalue="Python.run" />
+        <item itemvalue="Python.app" />
         <item itemvalue="Python.task_6" />
         <item itemvalue="Python.task_7" />
         <item itemvalue="Python.task_5" />
@@ -328,11 +361,11 @@
     <frame x="0" y="0" width="1280" height="800" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.15513127" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15513127" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.43452382" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.43452382" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39880952" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -387,13 +420,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/run.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -429,24 +455,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_6.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_7.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharmEdu2018.2/system/python_stubs/-1247971762/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="117">
           <caret line="815" column="8" selection-start-line="815" selection-start-column="8" selection-end-line="815" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week4/lesson_2_web_app_arc/homework/BohdanNovakivskyy/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="15" column="34" lean-forward="true" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -457,12 +476,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/week4/lesson_2_web_app_arc/homework/BohdanNovakivskyy/app.py">
+    <entry file="file://$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/run.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="15" column="34" lean-forward="true" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+        <state relative-caret-position="190">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_6.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_7.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
