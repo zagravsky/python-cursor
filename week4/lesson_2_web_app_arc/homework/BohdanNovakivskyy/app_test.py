@@ -19,17 +19,21 @@ class Developer:
     def __str__(self):
         return f'{self.first_name} {self.last_name} - {self.programming_language}'
 
+def get_list_dev():
+    return '<br>'.join([str(d) for d in developers])
 
 @app.route('/')
 def developer_controller():
-    developer_next = Developer('Gosha', 'Goblin', 'JS')
-    return developer_next.__str__
+    developer_next = Developer('Bohdan', 'Novakivskyy', 'Python')
+    return str(developer_next)
 
 
 @app.route('/remove_developer')
 def remove_developer():
-    if len(developers):
-        developers.pop()
-        return developers
-    else:
+    if not developers:
         return 'No developers in list'
+    else:
+        developers.pop()
+        return get_list_dev()
+
+
