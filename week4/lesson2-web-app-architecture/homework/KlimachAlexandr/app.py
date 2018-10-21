@@ -2,11 +2,7 @@ from flask import Flask
 
 app = Flask(__name__)
 
-developers_list = [
-    {'f_name': 'Konrad', 'l_name': 'Zuse', 'p_lang': 'Plankalkul'},
-    {'f_name': 'Bruce', 'l_name': 'Willis', 'p_lang': 'Assembly'},
-    {'f_name': 'Kenneth', 'l_name': 'Thompson', 'p_lang': 'C'}
-]
+dev_list = []
 
 
 class Developer:
@@ -19,6 +15,21 @@ class Developer:
         return f'{self.first_name} {self.last_name} - {self.programming_language}'
 
 
+konrad = Developer('Konrad', 'Zuse', 'Plankalkul')
+bruce = Developer('Bruce', 'Willis', 'Assembly')
+kenneth = Developer('Kenneth', 'Thompson', 'C')
+
+dev_list.append(konrad)
+dev_list.append(bruce)
+dev_list.append(kenneth)
+
+
+def output_list():
+    return '<br>'.join([str(f"{d.first_name} "
+                            f"{d.last_name} - "
+                            f"{d.programming_language}") for d in dev_list])
+
+
 @app.route('/')
 def developer_controller():
     dev = Developer('Alex', 'Klimach', 'Python')
@@ -27,8 +38,13 @@ def developer_controller():
 
 @app.route('/remove_developer')
 def remove_developer():
-    if len(developers_list) > 1:
-        developers_list.pop()
-        return '<br>'.join([str(f"{d['f_name']} {d['l_name']} - {d['p_lang']}") for d in developers_list])
+    empty = 'List of dev is empty'
+    if not dev_list:
+        return empty
     else:
-        return 'List of dev is empty'
+        dev_list.pop()
+        return empty if not dev_list else output_list()
+
+
+if __name__ == '__main__':
+    app.run()
