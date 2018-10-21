@@ -56,5 +56,6 @@ def data_members():
 
 
 if __name__ == '__main__':
-    settings = json.load(open("settings.json", "r"))
+    with open('settings.json', 'r') as f:
+        settings = json.load(f)
     app.run(port=settings['port'], host=settings['host'])
