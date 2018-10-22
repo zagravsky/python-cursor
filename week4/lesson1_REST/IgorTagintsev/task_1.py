@@ -55,6 +55,6 @@ def dump_members():
         return "MEMBERS.json created"
 
 if __name__ == "__main__":
-    server_settings = json.load(open('server_settings.json', 'r'))
-    app.run(**server_settings)
- 
+    with open('server_settings.json') as SS:
+        server_settings = json.load(SS)
+    app.run(**server_settings) 
