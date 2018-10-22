@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef027295-e034-4d00-b1f4-462af8654ea3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_6.py" beforeDir="false" afterPath="$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_6.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_7.py" beforeDir="false" afterPath="$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_7.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/week4" beforeDir="false" afterPath="$PROJECT_DIR$/week4" afterDir="false" />
@@ -22,19 +21,20 @@
           <entry key="project.closed" value="3" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.21" value="1" />
+          <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.29" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="3603" />
+          <entry key="py" value="3605" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="3603" />
+          <entry key="Python" value="3605" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -61,16 +61,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_6.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="1" column="71" selection-start-line="1" selection-start-column="71" selection-end-line="1" selection-end-column="71" />
+            <state relative-caret-position="57">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_7.py">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
@@ -98,8 +98,8 @@
         <option value="$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_1.py" />
         <option value="$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_5.py" />
         <option value="$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/run.py" />
-        <option value="$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_6.py" />
         <option value="$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_7.py" />
+        <option value="$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_6.py" />
       </list>
     </option>
   </component>
@@ -340,14 +340,14 @@
     <configuration />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="6" />
+    <frame x="55" y="0" width="1865" height="1080" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15513127" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15472312" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.43487394" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.43487394" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39915967" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -436,6 +436,9 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_7.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/run.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -445,13 +448,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_6.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="71" selection-start-line="1" selection-start-column="71" selection-end-line="1" selection-end-column="71" />
+        <state relative-caret-position="57">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_7.py">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
