@@ -37,17 +37,11 @@ def del_member(name):
         response_data["result"] = f"We delete member with name: {name}"
     return json.dumps(response_data)
 
-def get_ping(name):
-    response_data = {"jsonrpc": "2.0"}
-    response_data["result"] = f"Hi {name}. Success!"
-    return json.dumps(response_data)
-
 
 METHODS = {
     "getMember": get_member,
     "addMember": add_member,
     "delMember": del_member,
-    "ping": get_ping
 }
 
 
@@ -60,6 +54,16 @@ def handle():
 
     result = method_view(**data.get("params"))
     return result
+
+
+@app.route('/ping', methods=['POST'])
+def get_ping():
+    data = json.loads(request.data.decode('utf-8'))
+    if data.get('method') == 'ping':
+        response_data = {"jsonrpc": "2.0", "result": "ping success!"}
+    else:
+        response_data = {"error": {"code": -32601, "message": "Method not found"}}
+    return json.dumps(response_data)
 
 
 if __name__ == '__main__':
