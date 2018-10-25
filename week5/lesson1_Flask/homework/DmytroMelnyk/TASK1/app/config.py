@@ -18,8 +18,8 @@ class TestConfig(Config):
 
 
 def runtime_config():
-    env = "DEV"
-    # env = os.environ.get("ENV")
+    # env = "DEV"
+    env = os.environ.get("ENV")
     if env == "DEV":
         return DevConfig
     if env == "TEST":
