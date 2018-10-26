@@ -1,13 +1,11 @@
 from flask import Flask
-
-from app_fabrik.api import factory_api, homepage_api
-from app_fabrik.config import runtime_config
-
+from .api import factory_api, test_api, home_api
+from .config import runtime_config
 
 def run_app():
     app = Flask(__name__)
     app.config.from_object(runtime_config())
     app.register_blueprint(factory_api)
-    app.register_blueprint(homepage_api)
-
+    app.register_blueprint(test_api)
+    app.register_blueprint(home_api)
     return app

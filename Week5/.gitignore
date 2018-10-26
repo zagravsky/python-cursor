@@ -1,3 +1,11 @@
 .idea
 venv
 __pycache__
+Lesson9_Flask/app_fabrik
+Lesson9_Flask/templates
+Lesson9_Flask/static/
+Lesson9_Flask/MANIFEST.in
+Lesson9_Flask/__init__.py
+Lesson9_Flask/api/__init__.py
+Lesson9_Flask/app.py
+Lesson9_Flask/setup.py
