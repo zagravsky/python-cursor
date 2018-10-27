@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% set active_page = "movies" %}
+
+{% block title %}Movies{% endblock %}
+{% block body %}
+    <h1 class="display-3 text-center my-5">Movies</h1>
+    <div class="row">
+        {% for movie in movies %}
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="{{ url_for('static', filename='img/movie-placeholder.gif') }}"
+                         alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title font-weight-bold mb-0">{{ movie.title }}</h5>
+                        <p class="small">
+                            <span>{{ movie.genre }}. </span>
+                            <span>{{ movie.year }}. </span>
+                        </p>
+                        <p class="card-text">{{ movie.description }}</p>
+                        <a href="{{ url_for('movieblog_views.movie_view', movie_id=movie.id) }}"
+                           class="btn btn-primary">Go Detailed</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
