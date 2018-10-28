@@ -13,7 +13,7 @@ members = [
   {'age': 49, 'name': 'Batman'},
   {'age': 37, 'name': 'Claus'},
   {'age': 55, 'name': 'Frank'},
-  {'age': 83, 'name': 'Homer'}
+  {'age': 83, 'name': 'Homer'},
 ]
 
 print(up_name(members))
