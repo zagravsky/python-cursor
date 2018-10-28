@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <h1>{% block title %}Movie List{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+    {% if g.user %}
+    {% for post, info in data['data'].items() %}
+        <article class="post">
+            <header>
+                <div>
+                    <h1><a class=action href="{{ url_for('blog.post', id=info['id']) }}">{{ post }}</a></h1>
+                </div>
+            </header>
+        </article>
+    {% endfor %}
+    {% else %}
+    <h1>You must login to see the list of films!</h1>
+    {% endif %}
+
+{% endblock %}

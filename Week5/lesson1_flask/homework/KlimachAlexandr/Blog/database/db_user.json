@@ -1,0 +1,1 @@
+{"name": "users", "id_counter": 1, "data": [{"id": 0, "name": "alexandr", "password": "pbkdf2:sha256:50000$tCcPKm1V$3a87efaaac85430664a00bb935825af09bba857f2f13427597d01b7906827c4b", "age": "23", "email": "klimach95@gmail.com"}]}

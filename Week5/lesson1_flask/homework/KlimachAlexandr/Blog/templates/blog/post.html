@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}{{ movie }}{% endblock %}</h1>
+
+{% endblock %}
+
+{% block content %}
+    {% if g.user %}
+        <article class="post">
+            <header>
+                <div>
+                    <h1>Country - {{ info['country'] }}</h1>
+                    <h1>Year - {{ info['year'] }}</h1>
+                    <h1>Genre:
+                        {% for genre in info['genre'] %}
+                        {{genre}}
+                        {% endfor %}
+                    </h1>
+                </div>
+            </header>
+        </article>
+    {% else %}
+    <h1>You must be logged in to see this page.</h1>
+    {% endif %}
+{% endblock %}

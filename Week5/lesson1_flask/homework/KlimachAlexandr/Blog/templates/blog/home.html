@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <h1>{%  block title  %}Home page{% endblock %}</h1>
+    <a class="action" href="{{ url_for('blog.products') }}">Movie list</a>
+    <a class="action" href="404.html">404</a>
+{% endblock %}
+
+{% block content %}
+    <header>
+        <div>
+            {% if g.user %}
+            <h1>Hello {{ g.user['name'] }}!</h1>
+            {% else %}
+            <h1>Hello guest!</h1>
+            {% endif %}
+            <p>This is movie blog</p>
+        </div>
+    </header>
+
+{% endblock %}
