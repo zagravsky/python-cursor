@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block title %}Player{% endblock %}
+
+{% block body %}
+<!-- Football player section start -->
+	<section class="footballer-section spad">
+						<div class="col-lg-6">
+							<figure class="footballer-image">
+								<img src="./static/footballer.jpg" alt="5">
+							</figure>
+						</div>
+						<div class="col-lg-6">
+							<div class="footballer-text">
+								<h1>{{ player.Full_name }}</h1>
+							</div>
+							<div class="footballer-info">
+								<ul>
+									<li><span>Age:</span> {{ player.Age }}</li>
+									<li><span>Club:</span> {{ player.Club }}</li>
+								</ul>
+							</div>
+						</div>
+	</section>
+<!-- Football player section end -->
+{% endblock %}

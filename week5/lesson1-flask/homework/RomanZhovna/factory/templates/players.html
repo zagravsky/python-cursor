@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block title %}Players{% endblock %}
+
+{% block body %}
+
+<!-- Football player section start -->
+	<section class="footballer-section spad">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xl-10 offset-xl-1">
+					<div class="row">
+						<div class="col-lg-6">
+							{% for key, value in db.items() %}
+                                <h1>{{ key }}</h1>
+                                <a href="{{ url_for('player.player', name=key) }}" class="btn btn-primary">show info</a>
+                            {% endfor %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+<!-- Football player section end -->
+{% endblock %}
