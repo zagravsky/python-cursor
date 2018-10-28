@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movies</title>
+</head>
+<body>
+<h3>Hi, {{session.get('username', 'some is wrong')}}</h3> <h5><a href="{{ url_for('logout') }}">logout</a></h5>
+<a href="{{ url_for('home') }}">Home</a>
+
+<table border="1" width="70%" cellpadding="5">
+   <tr>
+    <th>Title </th>
+    <th>Producer</th>
+      </tr>
+    {% for elem in data %}
+           <tr>
+               <td> <a href="{{ url_for('movies_show', movie=elem.title) }}" > {{elem.title}}</a> </td>
+             <td>{{elem.producer}}</td>
+           </tr>
+    {% endfor %}
+
+</table>
+</body>
+</html>
