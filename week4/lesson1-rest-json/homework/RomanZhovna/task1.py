@@ -5,10 +5,11 @@ from flask import Flask
 from flask import request
 
 # Load settings from json file to local variable
-our_data = json.load(open("settings.json", "r"))
-HOST = our_data['host']
-PORT = our_data['port']
-DEBUG = our_data['debug']
+with open("settings.json", "r") as f:
+    our_data = json.load(f)
+    HOST = our_data['host']
+    PORT = our_data['port']
+    DEBUG = our_data['debug']
 
 app = Flask(__name__)
 
