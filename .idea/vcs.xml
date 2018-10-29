@@ -4,6 +4,7 @@
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/week4" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/week4/lesson1_REST" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/week4/lesson_2_web_app_arc/homework/BohdanNovakivskyy" vcs="Git" />
   </component>
 </project>
