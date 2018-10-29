@@ -4,7 +4,10 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef027295-e034-4d00-b1f4-462af8654ea3" name="Default Changelist" comment="" />
+    <list default="true" id="ef027295-e034-4d00-b1f4-462af8654ea3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/week4/lesson1_REST" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +105,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="226" />
     <option name="y" value="145" />
     <option name="width" value="1218" />
