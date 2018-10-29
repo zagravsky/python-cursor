@@ -5,62 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef027295-e034-4d00-b1f4-462af8654ea3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/python-cursor.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week5/Lesson9_Flask/MANIFEST.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week5/Lesson9_Flask/api/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week5/Lesson9_Flask/app.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week5/Lesson9_Flask/app_fabrik/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week5/Lesson9_Flask/app_fabrik/api.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week5/Lesson9_Flask/app_fabrik/app.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week5/Lesson9_Flask/app_fabrik/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week5/Lesson9_Flask/setup.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week5/Lesson9_Flask/static/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week5/Lesson9_Flask/templates/error_501.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week5/Lesson9_Flask/templates/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week5/Lesson9_Flask/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week5/Lesson9_Flask/templates/month.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week5/Lesson9_Flask/templates/test_methods.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week3/lesson1_Python_Standard_Library_HTTP/google/test1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week3/lesson1_Python_Standard_Library_HTTP/imp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week3/lesson1_Python_Standard_Library_HTTP/peoples.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week3/lesson1_Python_Standard_Library_HTTP/task1_dir_tree.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week3/lesson1_Python_Standard_Library_HTTP/task1_dir_tree.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week3/lesson1_Python_Standard_Library_HTTP/task2_csv.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week3/lesson1_Python_Standard_Library_HTTP/task2_cvs.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week3/lesson1_Python_Standard_Library_HTTP/task3_requests.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week3/lesson1_Python_Standard_Library_HTTP/task3_requests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week3/lesson2_OOP/task1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week3/lesson2_OOP/task1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week3/lesson2_OOP/task2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week3/lesson2_OOP/task2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week3/lesson2_OOP/task3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week3/lesson2_OOP/task3.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/week4/lesson1_REST/setting.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/week4/lesson1_REST/task2_rest.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/week4/lesson1_REST/task3_client.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week5/lesson9_flask/MANIFEST.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week5/lesson9_flask/api/123/321.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week5/lesson9_flask/api/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week5/lesson9_flask/app.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week5/lesson9_flask/app_fabrik/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week5/lesson9_flask/app_fabrik/api.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week5/lesson9_flask/app_fabrik/app.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week5/lesson9_flask/app_fabrik/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week5/lesson9_flask/app_fabrik/task1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week5/lesson9_flask/setup.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week5/lesson9_flask/static/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week5/lesson9_flask/templates/error_501.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week5/lesson9_flask/templates/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week5/lesson9_flask/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week5/lesson9_flask/templates/month.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week5/lesson9_flask/templates/test_methods.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy" beforeDir="false" afterPath="$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/run.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_1.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_2.py" beforeDir="false" />
@@ -102,14 +51,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="73" />
-          <entry key="gitignore" value="23" />
+          <entry key="gitignore" value="27" />
           <entry key="json" value="63" />
           <entry key="py" value="6733" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Git file" value="23" />
+          <entry key="Git file" value="27" />
           <entry key="JSON" value="63" />
           <entry key="Python" value="6806" />
         </counts>
@@ -137,7 +86,7 @@
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="57">
-              <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -456,7 +405,7 @@
     <frame x="60" y="0" width="1860" height="1080" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24387589" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24387589" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -468,7 +417,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32983193" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32983193" />
       <window_info anchor="bottom" id="Python Console" order="8" weight="0.32983193" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.42436975" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.42436975" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5012285" side_tool="true" weight="0.51240695" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -713,7 +662,7 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
-          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
