@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <title>Jinja lesson | {% block title %}{% endblock %}</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="static/layout.css" type="text/css">
+</head>
+<body>
+<div class="wrapper row1">
+  <header id="header" class="clear">
+      <div id="hgroup">
+        <h1><a href="/home">Jinja2 lesson</a></h1>
+      </div>
+        <nav>
+          <ul>
+              {% set navbar_menu = [
+                                    ('/home', 'home', 'Home'),
+                                    ('/other', 'other', 'Other'),
+                                    ] -%}
+              {% for href, id, caption in navbar_menu %}
+              <li>
+                  {% if id == active_page %} <a class="active" href="{{href}}"> {{caption}} </a>
+                  {% else %} <a href="{{href}}"> {{caption}} </a>
+                  {% endif%}
+              </li>
+              {% endfor %}
+          </ul>
+        </nav>
+  </header>
+</div>
+<!-- content -->
+    {% block body %}{% endblock %}
+<!-- Footer -->
+<div class="wrapper row3">
+  <footer id="footer" class="clear">
+    <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">pomacb</a></p>
+  </footer>
+</div>
+</body>
+</html>
+

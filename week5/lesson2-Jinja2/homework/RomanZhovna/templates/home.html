@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% set active_page = "home" %}
+{% block title %}Home{% endblock %}
+
+{% block body %}
+<center>
+<TABLE  BORDER="5" WIDTH="50%"   CELLPADDING="4" CELLSPACING="3">
+   <TR>
+      <TH COLSPAN="2">
+         <H3><BR>List of members</H3>
+      </TH>
+   </TR>
+      <TH>Visitor</TH>
+      <TH>Las visit</TH>
+    <TR>
+      <TD>Wayne Mark Rooney</TD>
+      <TD>{{ date_list[0]|datefilter }}</TD>
+   </TR>
+   <TR>
+      <TD>Zlatan Ibrahimovic</TD>
+      <TD>{{ date_list[1]|datefilter('%A %B %d, %Y') }}</TD>
+   </TR>
+   <TR>
+      <TD>Lionel Messi</TD>
+      <TD>{{ date_list[2]|datefilter('%B %d, %Y, %H:%M') }}</TD>
+   </TR>
+</TABLE>
+</center>
+{% endblock %}
