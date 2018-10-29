@@ -1,4 +1,5 @@
 from functools import wraps
+from datetime import datetime
 
 from flask import render_template, session, redirect, url_for, request, flash, current_app
 from flask.views import View, MethodView
@@ -24,9 +25,10 @@ def requires_auth(f):
 
 class HomeView(View):
     methods = ['GET']
+    date_now = datetime.now()
 
     def dispatch_request(self):
-        return render_template('home.html', news=news)
+        return render_template('home.html', news=news, date=self.date_now)
 
 
 class MoviesView(View):
