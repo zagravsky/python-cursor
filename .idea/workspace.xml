@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ef027295-e034-4d00-b1f4-462af8654ea3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/python-cursor.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week5/Lesson9_Flask/MANIFEST.in" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week5/Lesson9_Flask/api/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week5/Lesson9_Flask/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week5/Lesson9_Flask/app_fabrik/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week5/Lesson9_Flask/app_fabrik/api.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week5/Lesson9_Flask/app_fabrik/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week5/Lesson9_Flask/app_fabrik/config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week5/Lesson9_Flask/setup.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week5/Lesson9_Flask/static/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week5/Lesson9_Flask/templates/error_501.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week5/Lesson9_Flask/templates/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week5/Lesson9_Flask/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week5/Lesson9_Flask/templates/month.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week5/Lesson9_Flask/templates/test_methods.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week3/lesson1_Python_Standard_Library_HTTP/google/test1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week3/lesson1_Python_Standard_Library_HTTP/imp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week3/lesson1_Python_Standard_Library_HTTP/peoples.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week3/lesson1_Python_Standard_Library_HTTP/task1_dir_tree.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week3/lesson1_Python_Standard_Library_HTTP/task1_dir_tree.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week3/lesson1_Python_Standard_Library_HTTP/task2_csv.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week3/lesson1_Python_Standard_Library_HTTP/task2_cvs.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week3/lesson1_Python_Standard_Library_HTTP/task3_requests.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week3/lesson1_Python_Standard_Library_HTTP/task3_requests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week3/lesson2_OOP/task1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week3/lesson2_OOP/task1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week3/lesson2_OOP/task2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week3/lesson2_OOP/task2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week3/lesson2_OOP/task3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week3/lesson2_OOP/task3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week4/lesson1_REST/setting.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week4/lesson1_REST/task2_rest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week4/lesson1_REST/task3_client.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week5/lesson9_flask/MANIFEST.in" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week5/lesson9_flask/api/123/321.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week5/lesson9_flask/api/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week5/lesson9_flask/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week5/lesson9_flask/app_fabrik/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week5/lesson9_flask/app_fabrik/api.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week5/lesson9_flask/app_fabrik/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week5/lesson9_flask/app_fabrik/config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week5/lesson9_flask/app_fabrik/task1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week5/lesson9_flask/setup.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week5/lesson9_flask/static/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week5/lesson9_flask/templates/error_501.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week5/lesson9_flask/templates/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week5/lesson9_flask/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week5/lesson9_flask/templates/month.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week5/lesson9_flask/templates/test_methods.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/run.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_4.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_5.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_6.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_7.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/week4" beforeDir="false" afterPath="$PROJECT_DIR$/week4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/week4/lesson_2_web_app_arc/homework/BohdanNovakivskyy/app.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/week4/lesson_2_web_app_arc/homework/BohdanNovakivskyy/app_test.py" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="346612288">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="12" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.21" value="2" />
+          <entry key="project.open.time.25" value="2" />
+          <entry key="project.open.time.26" value="1" />
+          <entry key="project.open.time.28" value="1" />
+          <entry key="project.open.time.29" value="1" />
+          <entry key="project.open.time.30" value="1" />
+          <entry key="project.open.time.36" value="1" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.42" value="1" />
+          <entry key="project.open.time.46" value="1" />
+          <entry key="project.open.time.52" value="1" />
+          <entry key="project.opened" value="14" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="Python Console" value="73" />
+          <entry key="gitignore" value="23" />
+          <entry key="json" value="63" />
+          <entry key="py" value="6733" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Git file" value="23" />
+          <entry key="JSON" value="63" />
+          <entry key="Python" value="6806" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages" />
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="gitignore" value="2" />
+          <entry key="json" value="3" />
+          <entry key="py" value="38" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Git file" value="2" />
+          <entry key="JSON" value="3" />
+          <entry key="Python" value="38" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/hw2.py" />
+        <option value="$PROJECT_DIR$/../Git-lesson/gcd.py" />
+        <option value="$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_2.py" />
+        <option value="$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_3.py" />
+        <option value="$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_4.py" />
+        <option value="$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_1.py" />
+        <option value="$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_5.py" />
+        <option value="$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/run.py" />
+        <option value="$PROJECT_DIR$/week4/lesson_2_web_app_arc/homework/BohdanNovakivskyy/app_test.py" />
+        <option value="$PROJECT_DIR$/week4/lesson_2_web_app_arc/homework/BohdanNovakivskyy/app.py" />
+        <option value="$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_6.py" />
+        <option value="$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_7.py" />
+        <option value="$PROJECT_DIR$/week4/lesson1_REST/setting.json" />
+        <option value="$PROJECT_DIR$/week4/lesson1_REST/rest_simple_example.py" />
+        <option value="$PROJECT_DIR$/week4/lesson1_REST/task1.py" />
+        <option value="$PROJECT_DIR$/week4/lesson1_REST/task2_rest.py" />
+        <option value="$PROJECT_DIR$/week4/lesson1_REST/task3_client.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="226" />
+    <option name="y" value="145" />
+    <option name="width" value="1218" />
+    <option name="height" value="763" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="python-cursor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python-cursor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python-cursor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python-cursor" type="462c0819:PsiDirectoryNode" />
+              <item name="week4" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python-cursor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python-cursor" type="462c0819:PsiDirectoryNode" />
+              <item name="week4" type="462c0819:PsiDirectoryNode" />
+              <item name="lesson1_REST" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python-cursor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python-cursor" type="462c0819:PsiDirectoryNode" />
+              <item name="Week5" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python-cursor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python-cursor" type="462c0819:PsiDirectoryNode" />
+              <item name="Week5" type="462c0819:PsiDirectoryNode" />
+              <item name="Lesson9_Flask" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python-cursor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python-cursor" type="462c0819:PsiDirectoryNode" />
+              <item name="Week5" type="462c0819:PsiDirectoryNode" />
+              <item name="Lesson9_Flask" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Course" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/.gitignore" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="python-cursor" is-module-sdk="true">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="python-cursor" />
+      </console-settings>
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/week3/lesson1_Python_Standard_Library_HTTP" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/week3/lesson2_OOP" />
+      <recent name="$PROJECT_DIR$/week3/lesson1_Python_Standard_Library_HTTP" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.task3_client">
+    <configuration name="Flask" type="PythonConfigurationType" factoryName="Python" singleton="true">
+      <module name="python-cursor" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="FLASK_APP" value="app.py" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python3.7" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/week5/lesson9_flask" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/bin/flask" />
+      <option name="PARAMETERS" value="flask run" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="hw2" type="PythonConfigurationType" factoryName="Python">
+      <module name="python-cursor" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hw2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="task1 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="python-cursor" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/week4/lesson1_REST" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/week4/lesson1_REST/task1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="task1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="python-cursor" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/week3/lesson2_OOP" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/week3/lesson2_OOP/task1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="task2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="python-cursor" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/week3/lesson2_OOP" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/week3/lesson2_OOP/task2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="task2_rest" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="python-cursor" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/week4/lesson1_REST" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/week4/lesson1_REST/task2_rest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="task3_client" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="python-cursor" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/week4/lesson1_REST" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/week4/lesson1_REST/task3_client.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.Flask" />
+      <item itemvalue="Python.hw2" />
+      <item itemvalue="Python.task1" />
+      <item itemvalue="Python.task2" />
+      <item itemvalue="Python.task1 (1)" />
+      <item itemvalue="Python.task2_rest" />
+      <item itemvalue="Python.task3_client" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.task3_client" />
+        <item itemvalue="Python.task2_rest" />
+        <item itemvalue="Python.task1 (1)" />
+        <item itemvalue="Python.task1" />
+        <item itemvalue="Python.task2" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ef027295-e034-4d00-b1f4-462af8654ea3" name="Default Changelist" comment="" />
+      <created>1540371798029</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1540371798029</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="60" y="0" width="1860" height="1080" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24387589" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32983193" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4987715" weight="0.25682184" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49972782" weight="0.39880952" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32983193" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32983193" />
+      <window_info anchor="bottom" id="Python Console" order="8" weight="0.32983193" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.42436975" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5012285" side_tool="true" weight="0.51240695" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15513127" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.43452382" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39880952" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32886904" />
+      <window_info anchor="bottom" id="Python Console" order="8" weight="0.32886904" />
+      <window_info anchor="bottom" id="Inspection Results" order="9" weight="0.32886904" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout-to-restore>
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.log" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/hw2.py" />
+    <entry file="file://$PROJECT_DIR$/../Git-lesson/gcd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_1.py" />
+    <entry file="file://$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_2.py" />
+    <entry file="file://$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_3.py" />
+    <entry file="file://$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_4.py" />
+    <entry file="file://$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_5.py" />
+    <entry file="file://$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_6.py" />
+    <entry file="file://$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/run.py" />
+    <entry file="file://$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_7.py" />
+    <entry file="file://$PROJECT_DIR$/week5/lesson9_flask/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week5/lesson9_flask/app_fabrik/api.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week5/lesson9_flask/api/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week5/lesson9_flask/app_fabrik/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week5/lesson9_flask/app_fabrik/task1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week5/lesson9_flask/app_fabrik/app.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week5/lesson9_flask/app_fabrik/config.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file:///usr/lib/python3.7/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="311" selection-start-line="311" selection-end-line="311" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week3/lesson1_Python_Standard_Library_HTTP/google/findfiletype.log" />
+    <entry file="file://$PROJECT_DIR$/week5/lesson9_flask/api/123/321.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week3/lesson1_Python_Standard_Library_HTTP/list_dir_v2.py" />
+    <entry file="file://$PROJECT_DIR$/week3/lesson1_Python_Standard_Library_HTTP/list_dir.py" />
+    <entry file="file://$PROJECT_DIR$/.git/info/exclude">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="8" lean-forward="true" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week3/lesson1_Python_Standard_Library_HTTP/task1_dir_tree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week3/lesson1_Python_Standard_Library_HTTP/peoples.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week3/lesson1_Python_Standard_Library_HTTP/task2_csv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week3/lesson1_Python_Standard_Library_HTTP/imp.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week3/lesson1_Python_Standard_Library_HTTP/task3_requests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week3/lesson2_OOP/task3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-258">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week3/lesson2_OOP/task2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week3/lesson2_OOP/task1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python3.7/dist-packages/flask/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-464">
+          <caret line="1717" column="43" selection-start-line="1717" selection-start-column="41" selection-end-line="1717" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week4/lesson1_REST/some_data.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="16" selection-start-column="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week4/lesson1_REST/some_examples_with_json.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python3/dist-packages/apport_python_hook.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week4/lesson1_REST/task1.py" />
+    <entry file="file://$PROJECT_DIR$/week4/lesson1_REST/settings.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Week5/Lesson9_Flask/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week4/lesson1_REST/setting.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week4/lesson1_REST/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week4/lesson1_REST/routes/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week4/lesson1_REST/rest_simple_example.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" lean-forward="true" selection-end-line="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week4/lesson1_REST/task2_rest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="32" column="14" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Week5/Lesson9_Flask/api/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week4/lesson1_REST/task3_client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="15" lean-forward="true" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week4/lesson1_REST/json_rpc_simple_example.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
