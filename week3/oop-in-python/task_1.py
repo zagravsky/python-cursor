@@ -1,13 +1,13 @@
-class Developer():
-    def __init__(self, years_experience: int, name: str, language: str):
+class Developer:
+    def __init__(self, years_experience: int, name: str):
         self.years_experience = years_experience
         self.name = name
-        self.language = language
+        self.language = ''
 
-    def about(self, years_experience):
-        if years_experience <= 3:
+    def about(self):
+        if self.years_experience <= 3:
             return "My name is {} and I am a Junior Developer".format(self.name)
-        elif years_experience <= 5:
+        elif self.years_experience <= 5:
             return "My name is {} and I am a Middle Developer".format(self.name)
         else:
             return "My name is {} and I am a Senior Developer".format(self.name)
@@ -24,7 +24,7 @@ class Developer():
 
 class PythonDeveloper(Developer):
     def __init__(self, years_experience, name, language='Python'):
-        Developer.__init__(self, years_experience, name, language)
+        Developer.__init__(self, years_experience, name)
         self.language = language
 
     def write_code(self):
@@ -33,7 +33,7 @@ class PythonDeveloper(Developer):
 
 class JavaDeveloper(Developer):
     def __init__(self, years_experience, name, language='Java'):
-        Developer.__init__(self, years_experience, name, language)
+        Developer.__init__(self, years_experience, name)
         self.language = language
 
     def write_code(self):
@@ -42,7 +42,7 @@ class JavaDeveloper(Developer):
 
 class RubyDeveloper(Developer):
     def __init__(self, years_experience, name, language='Ruby'):
-        Developer.__init__(self, years_experience, name, language)
+        Developer.__init__(self, years_experience, name)
         self.language = language
 
     def write_code(self):
