@@ -5,9 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef027295-e034-4d00-b1f4-462af8654ea3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy" beforeDir="false" afterPath="$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/run.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/week2/lesson2-intro-to-functional/homework/BohdanNovakivskyy/task_1.py" beforeDir="false" />
@@ -372,9 +369,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="60" y="0" width="1860" height="1080" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24387589" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24387589" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -386,7 +382,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32983193" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32983193" />
       <window_info anchor="bottom" id="Python Console" order="8" weight="0.32983193" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.42436975" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.42436975" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5012285" side_tool="true" weight="0.51240695" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
