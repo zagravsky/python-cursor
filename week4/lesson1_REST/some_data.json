@@ -1,10 +1,1 @@
-[{
-  "week": 4,
-  "lesson": 1,
-  "topic": "What is Json"
-},
-{
-  "week": 1,
-  "lesson": 1,
-  "topic": "Intro"
-}]
+{"denis": {"age": 25, "gender": "male", "name": "denis"}}
