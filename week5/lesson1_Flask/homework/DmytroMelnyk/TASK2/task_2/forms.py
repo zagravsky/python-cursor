@@ -17,3 +17,11 @@ class LoginForm(FlaskForm):
     password = PasswordField('Password', validators=[DataRequired()])
     remember = BooleanField('Remember Me')
     submit = SubmitField('Login')
+
+
+class PostForm(FlaskForm):
+    Model = StringField('Model', validators=[DataRequired()])
+    Mark = StringField('Mark', validators=[DataRequired()])
+    Horsepower = StringField('Horsepower', validators=[DataRequired()])
+    Year = StringField('Year', validators=[DataRequired()])
+    Origin = StringField('Origin', validators=[DataRequired()])

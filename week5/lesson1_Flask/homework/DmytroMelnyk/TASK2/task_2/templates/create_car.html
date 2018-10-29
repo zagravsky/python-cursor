@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1>Create new car</h1>
+    <div class="content-section">
+
+        <div class="col-md-6">
+            <form action="{{url_for('create_car')}}" method="POST">
+            {% for field in form %}
+                <div class="form-group">
+                    {{ field.label(class='control-label') }}
+                    {{ field(class='form-control') }}
+                </div>
+            {% endfor %}
+
+                <button type="submit" class="btn btn-success">Create</button>
+
+            </form>
+        <div>
+
+    </div>
+{% endblock content %}
