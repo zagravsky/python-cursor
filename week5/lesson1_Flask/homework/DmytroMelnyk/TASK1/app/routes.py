@@ -17,9 +17,10 @@ def get_cars():
 
 @app.route('/cars/<string:car_model>', methods=['GET'])
 def get_car(car_model):
-    if len(list(filter(lambda x: x["Model"] == car_model, carbase))) == 0:
+    car = list(filter(lambda x: x["Model"] == car_model, carbase))
+    if len(car) == 0:
         abort(404)
-    return jsonify({'car': carbase[0]})
+    return jsonify({'car': car[0]})
 
 
 @app.errorhandler(404)
