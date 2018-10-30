@@ -1,4 +1,5 @@
 from task_1 import *
+from task_3 import *
 
 if __name__ == '__main__':
     python_developer = PythonDeveloper(1, 'Nastia')

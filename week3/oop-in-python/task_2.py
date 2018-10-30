@@ -13,8 +13,4 @@ class D(C, A):
 class E(D, B):
     pass
 
-print(A.mro())
-print(B.mro())
-print(C.mro())
-print(D.mro())
 print(E.mro())
