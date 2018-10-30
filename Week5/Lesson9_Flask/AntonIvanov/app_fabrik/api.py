@@ -2,7 +2,7 @@ from flask import Blueprint, render_template, request, jsonify, abort, flash, re
 from flask.views import MethodView
 from flask import current_app
 from .forms import LoginForm
-from .db import BIKES
+from .db import BIKES, USERS
 import json
 
 
@@ -38,11 +38,6 @@ class BikesView(MethodView):
             return jsonify({"status": "Fail", "message": "I don't know about such bike. Sorry"})
 
 
-class TestView(MethodView):
-    def get(self):
-        return render_template("test.html")
-
-
 class HomeView(MethodView):
     def get(self):
         return render_template("home.html")
@@ -62,7 +57,7 @@ class ProductListView(MethodView):
 def page_not_found(e):
     return render_template("error404.html"), 404
 
-class Loginview(MethodView):
+class LoginView(MethodView):
     def get(self):
         form = LoginForm()
         return render_template('login.html', form=form)
@@ -81,9 +76,6 @@ factory_api.add_url_rule('/factory', view_func=FabrikApiView.as_view('factory_ap
 bike_api = Blueprint('bikes_api', __name__)
 bike_api.add_url_rule('/bike', view_func=BikesView.as_view('bikes_api'))
 bike_api.add_url_rule('/bike/<string:name>', view_func=BikesView.as_view('bike_api'))
-#
-test_api = Blueprint('test_api', __name__, static_folder='static', template_folder='templates')
-test_api.add_url_rule('/test', view_func=TestView.as_view('test_api'))
 # Task 2
 home_api = Blueprint('home_api', __name__, static_folder='static',template_folder='templates')
 home_api.add_url_rule('/', view_func=HomeView.as_view('home_api'))
@@ -93,4 +85,4 @@ products_api.add_url_rule('/products', view_func=ProductListView.as_view('produc
 products_api.add_url_rule('/products/<string:name>', view_func=ProductListView.as_view('bike'))
 # Task 3
 login_api = Blueprint('login_api', __name__, static_folder='static', template_folder='templates')
-login_api.add_url_rule('/login', view_func=Loginview.as_view('login_api'))
+login_api.add_url_rule('/login', view_func=LoginView.as_view('login_api'))
