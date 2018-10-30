@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Jinja2</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+	<header>
+        <nav>
+            <ul>
+                <li class="{% block nav_home %}{% endblock %}"><a href="{{ url_for('home') }}">Home</a>
+                <li class="{% block nav_github %}{% endblock %}"><a href="{{ url_for('github') }}">GitHub</a>
+                <li class="{% block nav_jinja2 %}{% endblock %}"><a href="{{ url_for('jinja2') }}">Jinja2</a>
+            </ul>
+        </nav>
+
+	</header>
+	<section>
+		<strong>Templates. Simple custom template engine. Jinja2. Variables & Inheritance</strong>
+	</section>
+	<section id="pageContent">
+        {% block content %}
+        {% endblock %}
+	</section>
+	<footer>
+        {% include 'footer.html' %}
+	</footer>
+</body>
+</html>
