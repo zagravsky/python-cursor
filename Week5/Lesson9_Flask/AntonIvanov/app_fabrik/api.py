@@ -1,8 +1,10 @@
 from flask import Blueprint, render_template, request, jsonify, abort, flash, redirect, url_for
 from flask.views import MethodView
 from flask import current_app
-from .forms import LoginForm
-from .db import BIKES, USERS
+from werkzeug.security import generate_password_hash, check_password_hash
+from .forms import RegisterForm
+from .db import BIKES
+from .models import User
 import json
 
 
@@ -57,17 +59,38 @@ class ProductListView(MethodView):
 def page_not_found(e):
     return render_template("error404.html"), 404
 
-class LoginView(MethodView):
+class RegisterView(MethodView):
     def get(self):
-        form = LoginForm()
-        return render_template('login.html', form=form)
+        form = RegisterForm()
+        return render_template('register.html', form=form)
     def post(self):
-        form = LoginForm()
+        form = RegisterForm()
         if form.validate_on_submit():
-            flash('{}, remember me={}'.format(
-                form.username.data, form.remember_me.data))
+            user = User(
+                {
+                    'username': form.username.data,
+                    'email': form.email.data,
+                    'age': form.age.data,
+                    'password_hash': generate_password_hash(form.password.data)
+                }
+            )
+            with open('users.json', 'r') as f:
+                USERS = json.load(f)
+                user_list= USERS['users']
+            if user.username in [elem['username'] for elem in user_list]:
+                flash(f'username {user.username} is exists')
+                return render_template('register.html', form=form)
+            USERS['users'].append({
+                'username': user.username,
+                'email': user.email,
+                'age': user.age,
+                'password_hash': user.password_hash
+            })
+            flash('{} is registered'.format(user.username))
+            with open('users.json', 'w') as f:
+                json.dump(USERS, f)
             return redirect(url_for('home_api.home_api'))
-        return render_template('login.html', form=form)
+        return render_template('register.html', form=form)
 
 #
 factory_api = Blueprint('factory_api', __name__, static_folder='static', template_folder='templates')
@@ -84,5 +107,5 @@ products_api = Blueprint('products_api', __name__, static_folder='static', templ
 products_api.add_url_rule('/products', view_func=ProductListView.as_view('products_api'))
 products_api.add_url_rule('/products/<string:name>', view_func=ProductListView.as_view('bike'))
 # Task 3
-login_api = Blueprint('login_api', __name__, static_folder='static', template_folder='templates')
-login_api.add_url_rule('/login', view_func=LoginView.as_view('login_api'))
+register = Blueprint('register', __name__, static_folder='static', template_folder='templates')
+register.add_url_rule('/register', view_func=RegisterView.as_view('register'))
