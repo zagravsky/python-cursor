@@ -14,5 +14,8 @@ def dir_tree_func(path: str):
         for name in files:
             tree_dirs.append(" " * space * 2 + "| " + name)
     pprint.pprint(tree_dirs)
-path = os.getcwd()
+
+
+
+
 
