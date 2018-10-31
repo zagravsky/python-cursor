@@ -1,0 +1,41 @@
+body{
+    background: #FFEBCD;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #e7e7e7;
+    background-color: #DC143C;
+    }
+ul li{
+        list-style: none; float: left; margin-right: 20px;
+    }
+ul li a{
+        display: block;
+        color: #591313;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        }
+li a.active {
+            color: white;
+            background-color: #f28c8c;
+            }
+
+h2 {
+    font-style: italic;
+    text-align: center;
+    color: green;
+    }
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
+h4 {
+    font-style: italic;
+    text-align: center;
+    }
