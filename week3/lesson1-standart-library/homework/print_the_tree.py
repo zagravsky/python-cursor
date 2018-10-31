@@ -9,16 +9,16 @@ def make_change_dir(dir_path: str):
 
 root_dir_path = os.path.expanduser('~') + '/Test_dir_tree'
 make_change_dir(root_dir_path)
-for i in range(0, 3):
+for i in range(3):
     make_change_dir(root_dir_path+'/Dir'+str(i))
 
-    for _ in range(0, 2):
-        file = open("file"+str(_)+".txt", "tw")
+    for _ in range(2):
+        file = open('file{0}.txt'.format(_), "tw")
         file.close()
     make_change_dir('Sub_Dir_' + str(i))
 
-    for _ in range(0, 3):
-        file = open("file"+str(_)+"_"+str(_)+".txt", "tw")
+    for _ in range(3):
+        file = open('file{0}_{0}.txt'.format(_), "tw")
         file.close()
 
 print(os.path.abspath(root_dir_path))
