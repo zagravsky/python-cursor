@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>{{title}}</title>
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+        $('ul li a').click(function(){
+        $('li a').removeClass("active");
+        $(this).addClass("active");
+        });
+        });
+    </script>
+</head>
+
+    <body>
+        <ul>
+
+              <li><a href="{{ url_for('home') }}">Home</a></li>
+              <li><a href="{{ url_for('time') }}">Task 1</a></li>
+              <li><a href="{{ url_for('new_page') }}">Task 2</a></li>
+              <li><a href="{{ url_for('new_page_2') }}">Task 3</a></li>
+        </ul>
+
+
+    <h2>Welcome to Jinja2</h2>
+    {% block content %}{% endblock %}
+    <footer>
+            <hr>
+                Homework of Jinja2
+    </footer>
+</body>
+</html>
