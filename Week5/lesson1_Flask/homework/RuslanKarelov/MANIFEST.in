@@ -1,0 +1,3 @@
+graft RuslanKarelov/static
+graft RuslanKarelov/templates
+global-exclude *.pyc

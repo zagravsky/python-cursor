@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List of products</title>
+    <link href="{{ url_for('static', filename='home_page.css') }}" rel="stylesheet">
+
+</head>
+<body>
+<h1 style="text-align:left;"> List of product</h1>
+    {% for key in data.keys() %}
+    <a href="{{ url_for('home.data', dat=key) }}"><p>{{key|capitalize}}</p></a>
+    {% endfor %}
+</body>
+</html>

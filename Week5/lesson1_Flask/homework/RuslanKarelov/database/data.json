@@ -1,0 +1,1 @@
+{"diamond": {"name": "Diamond", "hardness": 10, "formula": "C"}, "corundum": {"name": "Corundum", "hardness": 9, "formula": "Al2O3"}, "topaz": {"name": "Topaz", "hardness": 8, "formula": "Al2SiO4(F,OH)2"}, "quartz": {"name": "Quartz", "hardness": 7, "formula": "SiO2"}, "apatite": {"name": "Apatite", "hardness": 5, "formula": "Ca5(PO4)3(F,Cl,OH)"}}
