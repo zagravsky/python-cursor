@@ -1,4 +1,2 @@
-def up_name(memb: list) -> list:
-	for m in memb:
-		m['name'] = m['name'].upper()
-	return memb
+def up_name(members: list):
+	return list({'age': memb['age'], 'name':memb['name'].upper()} for memb in members)
