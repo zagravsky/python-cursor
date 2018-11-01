@@ -2,8 +2,8 @@
 {% block title %}Product List{% endblock %}
 {% block content %}
 <div>
-    <a href="{{ url_for('home_api.home_api') }}">Home</a>|
-    <a href="{{ url_for('products_api.products_api') }}">Bikes List</a>
+    <a href="{{ url_for('home.home') }}">Home</a>|
+    <a href="{{ url_for('products.products') }}">Bikes List</a>
 </div>
 <div>
     <h2>Bike {{ data['name'] }}</h2>

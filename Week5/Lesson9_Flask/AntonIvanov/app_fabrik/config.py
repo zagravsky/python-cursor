@@ -1,8 +1,9 @@
 import os
-
+from datetime import timedelta
 
 class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'you-will-never-guess'
+    PERMANENT_SESSION_LIFETIME = timedelta(minutes=5)
     TEST_VARIABLE = "Config"
     DEBUG = False
     TESTING = False
