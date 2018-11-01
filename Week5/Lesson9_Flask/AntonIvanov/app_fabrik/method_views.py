@@ -110,7 +110,8 @@ class TestView(MethodView):
     def get(self):
         if session.get('mode') == "Test Config":
             return render_template('test_methods.html', values=test_methods_dict)
-        return session.get('mode')
+        mode = session.get('mode')
+        return f'You are in {mode} mode. To get access to this page enter in TEST mode'
 
 # Task 2
 home = Blueprint('home', __name__, static_folder='static', template_folder='templates')
