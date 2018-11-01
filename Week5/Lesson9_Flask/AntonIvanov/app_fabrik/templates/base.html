@@ -12,6 +12,9 @@
     {% else %}
         <a href="{{ url_for('login.login') }}">Login</a>
     {% endif %}
+    {% if session.mode == "Test Config" %}
+        <a href="{{ url_for('test.test') }}">Test</a>
+    {% endif %}
 </div>
  {% if session.username %}
                 <div> Hi {{ session.username }}</div>

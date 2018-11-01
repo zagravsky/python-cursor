@@ -1,6 +1,6 @@
 from flask import Flask
 from .api import factory_api, bike_api
-from .method_views import home, products, page_not_found, register, login, logout
+from .method_views import home, products, page_not_found, register, login, logout, test
 from .config import runtime_config
 
 
@@ -15,4 +15,5 @@ def run_app():
     app.register_blueprint(register)
     app.register_blueprint(login)
     app.register_blueprint(logout)
+    app.register_blueprint(test)
     return app
