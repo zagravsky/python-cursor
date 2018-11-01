@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="Cursor" content="" />
+	<meta name="description" content="" />
+	<link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+
+    <title>
+        {% block title %}
+
+        {% endblock %}
+    </title>
+
+
+</head>
+
+<body>
+
+<div id="Meny" class="wrapper">
+
+	<header class="header">
+		<strong>Meny:</strong>
+		<div id="meny1">
+		<a href="{{ url_for('index') }}">Python</a>
+		<a href="{{ url_for('route_to_c_plus') }}">C++</a>
+		</div>
+	</header><!-- .header-->
+
+	<div class="middle">
+
+		<div class="container">
+			<main class="content">
+				<strong>Content:</strong>
+                {% block content %}
+
+                {% endblock %}
+			</main><!-- .content -->
+		</div><!-- .container-->
+
+		<aside class="left-sidebar">
+			<strong>Date:</strong>
+
+			  {% include 'date.html' %}
+		</aside><!-- .left-sidebar -->
+
+	</div><!-- .middle-->
+
+</div><!-- .wrapper -->
+
+<footer class="footer">
+	<strong>Footer:</strong> Footer text.
+</footer><!-- .footer -->
+
+<script type="text/javascript">
+	try{
+	var el=document.getElementById('Meny').getElementsByTagName('a');
+	var url=document.location.href;
+	for(var i=0;i<el.length; i++){
+	if (url==el[i].href){
+	el[i].className += ' active';
+	};
+	};
+	}catch(e){}
+</script>
+
+
+</body>
+</html>
+
