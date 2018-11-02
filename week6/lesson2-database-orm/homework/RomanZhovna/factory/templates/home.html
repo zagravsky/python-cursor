@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% set active_page = "home" %}
+{% block title %}Home{% endblock %}
+
+{% block body %}
+<div id="homepage">
+  <section id="services" class="clear">
+      <section id="slider"><a href="#"><img src="static/general.gif" alt=""></a></section>
+      {% for item in news %}
+        {% if news.index(item) != (news|length - 1)%}
+            <article class="one_quarter" >
+                <strong>{{ item.Title }}</strong>
+                <p1>{{ item.Text }}</p1>
+            </article>
+        {% else %}
+            <article class="one_quarter lastbox">
+                <strong>{{ item.Title }}</strong>
+                <p1>{{ item.Text }}</p1>
+            </article>
+        {% endif %}
+      {% endfor %}
+  </section>
+</div>
+{% endblock %}

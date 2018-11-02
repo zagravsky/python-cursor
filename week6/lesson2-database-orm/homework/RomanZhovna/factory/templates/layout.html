@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <title>Footballers info | {% block title %}{% endblock %}</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="static/layout.css" type="text/css">
+</head>
+<body>
+<div class="wrapper row1">
+  <header id="header" class="clear">
+    <div id="hgroup">
+      <h1><a href="/home">Football players info</a></h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="/home">Home</a></li>
+		<li><a href="/list">List of players</a></li>
+        <li class="last"><a href="/login">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+</div>
+<!-- content -->
+<div class="wrapper row2">
+  <div id="container" class="clear">
+    {% block body %}{% endblock %}
+  </div>
+</div>
+<!-- Footer -->
+<div class="wrapper row3">
+  <footer id="footer" class="clear">
+    <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">pomacb</a></p>
+  </footer>
+</div>
+</body>
+</html>
