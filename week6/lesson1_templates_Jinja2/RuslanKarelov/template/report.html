@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %} {{month["period"]|capitalize}} {% endblock %}
+{% block content %}
+<h2> Звіт купівлі атомобілів за {{ month["period"] }}</h2>
+<table style="width: 100%">
+    <thead>
+        <tr>
+            <th>Марка</th>
+            <th>Модель</th>
+            <th>Тип кузова</th>
+            <th>Тип палива</th>
+            <th>Ціна в доларах</th>
+            <th>Ціна в гривнях</th>
+            <th>Дата купівлі</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for data in month["data"] %}
+            <tr>
+                <td>{{ data["name"] }}</td>
+                <td>{{ data["model"] }}</td>
+                <td>{{ data["car_body"] }}</td>
+                <td>{{ data["fuel"] }}</td>
+                <td>{{ data["price"] }}</td>
+                <td>{{ data["price"]*29 }}</td>
+                <td>{{ data["date"].strftime('%d/%m/%y') }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
+

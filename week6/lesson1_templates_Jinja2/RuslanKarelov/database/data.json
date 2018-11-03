@@ -1,0 +1,62 @@
+[
+  {
+    "id": "september",
+    "period": "Вересень 2018",
+    "data": [
+      {
+        "name": "Ford",
+        "model": "Focus",
+        "car_body": "Hatchback",
+        "fuel": "petrol",
+        "price": 25000,
+        "date": "2018/09/04"
+      },
+      {
+        "name": "Lada",
+        "model": "Kalina",
+        "car_body": "Sedan",
+        "fuel": "petrol",
+        "price": 15000,
+        "date": "2018/09/18"
+      },
+      {
+        "name": "Ford",
+        "model": "Mustang",
+        "car_body": "Sedan",
+        "fuel": "petrol",
+        "price": 62000,
+        "date": "2018/09/25"
+      }
+    ]
+  },
+  {
+    "id": "october",
+    "period": "Жовтень 2018",
+    "data": [
+      {
+        "name": "BMW",
+        "model": "318i",
+        "car_body": "Sedan",
+        "fuel": "petrol",
+        "price": 35000,
+        "date": "2018/10/03"
+      },
+      {
+        "name": "Audi",
+        "model": "S1 2.0 TFSI",
+        "car_body": "Hatchback",
+        "fuel": "petrol",
+        "price": 41000,
+        "date": "2018/10/13"
+      },
+      {
+        "name": "Subaru",
+        "model": "Impreza WRX STI",
+        "car_body": "Hatchback",
+        "fuel": "petrol",
+        "price": 61000,
+        "date": "2018/10/30"
+      }
+    ]
+  }
+]
