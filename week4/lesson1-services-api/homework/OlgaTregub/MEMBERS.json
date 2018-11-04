@@ -1,0 +1,17 @@
+{
+    "denis": {
+        "age": 25,
+        "gender": "male",
+        "name": "Denis"
+    },
+    "olga": {
+        "age": 35,
+        "gender": "female",
+        "name": "Olga"
+    },
+    "Pit": {
+        "age": 50,
+        "name": "Pit",
+        "gender": "male"
+    }
+}
