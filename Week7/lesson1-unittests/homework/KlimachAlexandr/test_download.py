@@ -8,7 +8,7 @@ class Download(unittest.TestCase):
         with patch('requests.get') as mock_request:
             url = 'http://local.host'
             mock_request.return_value.content = b'picture'
-            mock_request.response.content = download_something(url)
-            self.assertIsNotNone(mock_request.response.content)
-            self.assertEqual(mock_request.response.content, b'picture')
-            self.assertNotEqual(mock_request.response.content, b'blah')
+            mock_request.response = download_something(url)
+            self.assertIsNotNone(mock_request.response)
+            self.assertEqual(mock_request.response, b'picture')
+            self.assertNotEqual(mock_request.response, b'blah')

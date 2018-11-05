@@ -23,7 +23,6 @@ class TestBook(unittest.TestCase):
         print('tearDown: Clean\n')
 
     def test_book_title(self):
-        print('test_book_title')
         self.assertEqual(self.book_1.book_description, example.b_title_one)
         self.assertEqual(self.book_2.book_description, example.b_title_two)
         self.assertEqual(self.book_3.book_description, example.b_title_three)
@@ -51,7 +50,6 @@ class TestBookshelf(unittest.TestCase):
         print('tearDown: Clean\n')
 
     def test_add_book(self):
-        print('test_add_book')
         self.shelf.add_book(self.book_1)
         self.shelf.add_book(self.book_2)
         self.shelf.add_book(self.book_3)
@@ -63,7 +61,6 @@ class TestBookshelf(unittest.TestCase):
         self.assertEqual(len(self.shelf.books), 3)
 
     def test_description(self):
-        print('test_description')
         self.shelf.add_book(self.book_1)
         self.shelf.add_book(self.book_2)
         self.shelf.add_book(self.book_3)
@@ -71,7 +68,6 @@ class TestBookshelf(unittest.TestCase):
         self.assertEqual(self.shelf.description, example.description)
 
     def test_delete_book(self):
-        print('test_delete_book')
         self.shelf.add_book(self.book_1)
         self.shelf.add_book(self.book_2)
         self.shelf.add_book(self.book_3)
