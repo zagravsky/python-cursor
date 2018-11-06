@@ -1,0 +1,30 @@
+{% extends 'jinja2-layout.html' %}
+
+{% block content %}
+<h1>Книга учёта</h1>
+<h2>Расходы за {{ date|datetime }}</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Продукт</th>
+      <th scope="col">Количество</th>
+      <th scope="col">Единица</th>
+      <th scope="col">Цена, грн/eд.</th>
+      <th scope="col">Стоимость, грн</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for row in rows %}
+  {% include 'jinja2-row.html' %}
+  {% endfor %}
+  </tbody>
+  <tfoot>
+    <tr style="color:red">
+      <th colspan="4" scope="row">Итого</th>
+      <th >{{ total_cost }}</th>
+    </tr>
+  </tfoot>
+</table>
+{% endblock %}
+
+{% block title %}Книга учёта{% endblock %}

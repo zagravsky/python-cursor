@@ -1,0 +1,11 @@
+<div class="container">
+  <ul class="nav nav-pills">
+    {% for link in links %}
+      <li class="nav-item">
+        <a class="nav-link {% if link.name==name %}active{% endif %}" href="{{ link.href }}">
+          {{ link.caption }}
+        </a>
+      </li> 
+    {% endfor %}
+  </ul>
+</div>

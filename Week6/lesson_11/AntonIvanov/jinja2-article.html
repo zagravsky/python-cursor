@@ -1,0 +1,22 @@
+{% extends 'jinja2-layout.html' %}
+
+{% block title %}Some article{% endblock %}
+
+{% block content %}
+<div class="container">
+      <div class="row">
+      {% for article in articles %}
+            <div class="col-sm-6">
+                  <div>
+                  <h2>{{ article['title_heading'] }}</h2>
+                      <h5>{{ article['title_description'] }}  {{ date|datetime }}</h5>
+                      <div class="fakeimg">Fake Image</div>
+                      <p>
+                        {{  article['text']  }}
+                      </p>
+                  </div>
+            </div>
+      {% endfor %}           
+      </div>      
+</div>
+{% endblock %}
