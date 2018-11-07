@@ -1,10 +1,12 @@
-from unittest import TestCase, mock
+from unittest import TestCase
+from unittest.mock import patch
 
 from library import Book, Bookshelf
 from data_downloader import get_data
 
 
 class TestBook(TestCase):
+
     def setUp(self):
         self.title = 'Fahrenheit 451'
         self.author = 'Ray Bradbury'
@@ -19,6 +21,7 @@ class TestBook(TestCase):
 
 
 class TestBookshelf(TestCase):
+
     def setUp(self):
         self.book1 = Book("Fahrenheit 451", "Ray Bradbury", "1953")
         self.book2 = Book("Hard to Be a God", "Arkady and Boris Strugatsky", "1964")
@@ -35,9 +38,16 @@ class TestBookshelf(TestCase):
 
 
 class TestDataDownloader(TestCase):
-    @mock.patch('get_data.requests.get')
-    def test_data_downloader(self, mock_get):
-        mock_get.return_value.content = b'picture'
-        response = get_data('')
 
+    @patch('data_downloader.requests.get')
+    def test_data_downloader(self, mocked_get):
+        mocked_get.return_value.content = b'picture'
+        response = get_data('https://test.page')
+        mocked_get.assert_called_with('https://test.page')
         self.assertEqual(response.content, b'picture')
+
+
+if __name__ == '__main__':
+    from unittest import main
+
+    main()
