@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h2>List of Cars Page</h2>
+  <section class="cars-section spad">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xl-10 offset-xl-1">
+          <div class="row">
+            <div class="col-lg-6">
+              {% for car in carbase %}
+                    <h5><a href="/cars/{{ car.model }}">{{ car.model }} {{car.mark}}</a></h5>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <a href="/create"> + Add a new Car</a>
+{% endblock content %}
+
+
+
+
+
