@@ -2,8 +2,9 @@ from django.http import HttpResponse
 from .models import Article
 from django.shortcuts import render, get_object_or_404, redirect
 from .forms import NewArticleForm
-from django.views.generic import ListView, DetailView, CreateView
+from django.views.generic import ListView, DetailView, CreateView, FormView, View
 from django.urls import reverse
+from django.contrib.auth.forms import AuthenticationForm
 
 
 class IndexView(ListView):
@@ -29,3 +30,9 @@ class ArticleCreateView(CreateView):
 
     def get_success_url(self):
         return reverse('detail', args=(self.object.id,))
+
+
+class LoginFormView(FormView):
+    form_class = AuthenticationForm
+    template_name = "login.html"
+    success_url = '/'
