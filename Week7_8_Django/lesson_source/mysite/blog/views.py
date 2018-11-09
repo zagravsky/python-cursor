@@ -10,6 +10,12 @@ class IndexView(ListView):
     model = Article
     template_name = "index.html"
 
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super(IndexView, self).get_context_data()
+        context['page_title'] = 'All articles'
+        return context
+
+
 
 class ArticleDetailView(DetailView):
     model = Article
