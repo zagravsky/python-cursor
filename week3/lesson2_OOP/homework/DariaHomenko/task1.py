@@ -7,12 +7,12 @@ class Developer:
         self.name = name
 
     def about(self):
+	level = 'Senior'
         if self.years_experience <= 3:
-            return 'My name is {} and I am a Junior Developer'.format(self.name)
+	    level = 'Junior'            
         elif 3 < self.years_experience <= 5:
-            return 'My name is {} and I am a Middle Developer'.format(self.name)
-        else:
-            return 'My name is {} and I am a Senior Developer'.format(self.name)
+            level = 'Middle'
+        return 'My name is {} and I am a {} Developer'.format(self.name, level)
 
     def write_code(self):
         return 'I am developer and I write code'
