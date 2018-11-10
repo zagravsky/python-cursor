@@ -24,6 +24,6 @@ for i in range(3):
 print(os.path.abspath(root_dir_path))
 
 for d_p, d_n, files in os.walk(root_dir_path):
-    print(' '*len(os.path.abspath(d_p))+'/'+'-'*3, os.path.basename(d_p))
+    print("{:>{a}}{}".format('/', os.path.basename(d_p), a=len(os.path.abspath(d_p))))
     for f in files:
-        print(' '*len(d_p)+'!'+'-'*(len(os.path.basename(d_p))+4), f)
+        print("{:>{a}}!{:->{b}}".format(' ', f, a=len(d_p), b=(len(os.path.basename(d_p))+10)))
