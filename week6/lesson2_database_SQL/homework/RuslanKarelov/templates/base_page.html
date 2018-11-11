@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .center {
+             margin: auto;
+             border: hidden;
+             border-radius: 12px;
+             width: auto;
+             background: #ccc;
+             padding: 40px;
+             padding-right: 30px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <a href="{{url_for('start_page.start_page')}}"><h1 style="text-align: left">Home</h1></a>
+    <a href="{{url_for('report_page.report_september')}}"><h2 style="text-align: left">September</h2></a>
+    <a href="{{url_for('report_page.report_october')}}"><h2 style="text-align: left">October</h2></a>
+</header>
+{% block content %} {% endblock %}
+</body>
+</html>

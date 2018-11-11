@@ -1,0 +1,37 @@
+body {
+    background-color: #F5FFFA;
+}
+
+header {
+    border: hidden;
+    border-radius: 12px;
+    background-color: gray;
+}
+
+a:link, a:visited {
+    border: hidden;
+    border-radius: 12px;
+    background-color: gray;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover, a:active {
+     background-color: rgb(180, 180, 180)
+}
+
+table {
+     border-collapse: collapse;
+}
+
+th, td {
+     text-align: center;
+     padding: 8px;
+     border-bottom: 1px solid #787878;
+}
+
+tr:hover {background-color: rgb(180, 180, 180);}
+

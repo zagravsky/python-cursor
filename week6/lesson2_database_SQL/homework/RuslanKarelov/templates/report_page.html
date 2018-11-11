@@ -1,0 +1,32 @@
+{% extends "base_page.html" %}
+{% block title %} Report {% endblock %}
+{% block content %}
+<h2> Звіт купівлі атомобілів </h2>
+<table style="width: 100%">
+    <thead>
+        <tr>
+            <th>Марка</th>
+            <th>Модель</th>
+            <th>Тип кузова</th>
+            <th>Тип палива</th>
+            <th>Ціна в доларах</th>
+            <th>Ціна в гривнях</th>
+            <th>Дата купівлі</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for element in obj %}
+            <tr>
+                <td>{{ element.name }}</td>
+                <td>{{ element.model }}</td>
+                <td>{{ element.car_body }}</td>
+                <td>{{ element.fuel }}</td>
+                <td>{{ element.price }}</td>
+                <td>{{ element.price*29 }}</td>
+                <td>{{ element.date.strftime('%d %B %Y') }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
+
