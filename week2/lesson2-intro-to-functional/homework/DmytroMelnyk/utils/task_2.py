@@ -1,4 +1,4 @@
-def uppercase_list(l: list):
+def uppercase_list(l: list)->list:
     """
     For each member make his name uppercase
     :param l: input list of dict

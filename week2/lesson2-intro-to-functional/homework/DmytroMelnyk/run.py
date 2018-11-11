@@ -5,6 +5,7 @@ from utils.task_4 import filter_o_left
 from utils.task_5 import sum_min_max
 from utils.task_6 import sort_len_name
 
+
 members = [
     {'age': 43, 'name': 'Denis'},
     {'age': 49, 'name': 'Roman'},
@@ -16,6 +17,7 @@ members = [
     {'age': 55, 'name': 'Frank'},
     {'age': 83, 'name': 'Homer'}
 ]
+
 
 print('Task 2')
 print("members:      ", members)

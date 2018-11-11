@@ -1,4 +1,4 @@
-def filter_and_load(l: list):
+def filter_and_load(l: list)->list:
     """
     Each member will be exclude of group after reaching the age of 200 years.
     Add field "load" for each member, which shows percentage of progress

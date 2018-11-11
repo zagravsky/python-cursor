@@ -1,4 +1,4 @@
-def filter_o_left(l: list):
+def filter_o_left(l: list)->list:
     """
     Left only those members who have letter 'o' in names.
     :param l: input list of dict

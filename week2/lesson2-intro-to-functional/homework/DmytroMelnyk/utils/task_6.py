@@ -1,4 +1,4 @@
-def sort_len_name(l: list):
+def sort_len_name(l: list)->list:
     """
     Sort members by length of their names. If length of names is equal than sort by age.
     :param l: input list of dict

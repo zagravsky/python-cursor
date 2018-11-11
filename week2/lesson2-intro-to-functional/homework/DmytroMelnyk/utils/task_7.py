@@ -1,4 +1,4 @@
-def convert_dec_roman(inp):
+def convert_dec_roman(inp)->str:
     """
     Function that will convert decimal values to Roman Numerals
     :param inp: arabian num

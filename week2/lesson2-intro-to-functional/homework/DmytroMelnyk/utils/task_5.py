@@ -1,4 +1,4 @@
-def sum_min_max(l: list):
+def sum_min_max(l: list)->list:
     """
     Write function that return three values
     :param l: input list of dict
@@ -11,7 +11,7 @@ def sum_min_max(l: list):
     max_l = max(l, key=lambda x: x['age'])
     sum_l = sum(map(lambda x: x['age'], l))
 
-    return sum_l, min_l, max_l
+    return (sum_l, min_l, max_l)
 
 
 if __name__ == '__main__':
