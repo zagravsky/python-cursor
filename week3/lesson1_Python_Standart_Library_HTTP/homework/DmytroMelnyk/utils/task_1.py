@@ -9,8 +9,7 @@ import os
 from pprint import pprint
 
 
-
-def treefiles(path: str):
+def treefiles(path: str)->dict:
     """
     Using recursive function and os module, pretty print the tree with directory and file names.
     :param path: 

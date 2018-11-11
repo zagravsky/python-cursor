@@ -6,7 +6,7 @@
 import requests
 
 
-def dowlnoad_from_url(u: str):
+def dowlnoad_from_url(u: str)->None:
     """
     Using requests library, download image from url and save it as a file on your device.
     :param u: url
