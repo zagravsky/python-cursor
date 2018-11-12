@@ -2,6 +2,6 @@
 
 <img src="{% static 'kali.jpg' %}">
 
-{% for article in articles %}
-    <p>{{ article.title }}</p>
+{% for article in object_list %}
+<a href="{% url 'detail' article.id %}">{{ article.title }}</a>
 {% endfor %}
