@@ -2,7 +2,7 @@ from flask import Flask
 
 from flask_bcrypt import Bcrypt
 from config import runtime_config
-from api.view import pages_view
+from api.view import pages_view, error_404
 from db.db_creation import create_db
 from db.relationship import one_to_many
 from api.user_api import user_api
@@ -23,5 +23,6 @@ def run_app():
     app.register_blueprint(one_to_many)
     app.register_blueprint(user_api)
     app.register_blueprint(flower_api)
+    app.register_error_handler(404, error_404)
     Bcrypt(app)
     return app
