@@ -14,7 +14,7 @@ class LoginForms(FlaskForm):
         user = User.query.filter_by(name=username.data).first()
 
         if not user:
-            raise ValidationError('That username is not used. Please enter correct user name')
+            raise ValidationError('That username is not used. Please enter correct user name or SIGN IN')
 
 
 class Sign_inForm(FlaskForm):
