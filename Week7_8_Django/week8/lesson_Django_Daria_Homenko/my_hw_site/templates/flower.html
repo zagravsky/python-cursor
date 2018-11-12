@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>
+        <div>
+
+            <a href= "{% url 'index' %}">List of flower</a>
+            <hr>
+        </div>
+    </h2>
+    <h1>{{object.flower_name}}</h1>
+    <div>
+        <p>
+            <img src="{{object.flower_image}}">
+        </p>
+
+    </div>
+
+    <div class="text" >
+        {{object.flower_description}}
+    </div>
+{% endblock %}

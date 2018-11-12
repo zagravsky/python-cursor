@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1><p>List of flowers</p></h1>
+
+    <ul>
+        {% for flower in object_list %}
+           <p>
+              <li><a href="{% url 'flower' flower.id %}">{{ flower.flower_name }}</a></li>
+           </p>
+       {% endfor %}
+    </ul>
+
+    <div>
+        <p>
+            <img src="https://pustunchik.ua/uploads/school/a37a87a1c57daa778d59326964287e6d.jpg">
+        </p>
+    </div>
+
+{% endblock %}l>
