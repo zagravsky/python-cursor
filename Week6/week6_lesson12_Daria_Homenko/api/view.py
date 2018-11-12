@@ -27,7 +27,8 @@ def list_of_flowers_page():
 def flower_page(flower_name):
     flower = Flower.query.filter_by(flower_name=flower_name).first()
     return render_template('flower.html', flower_name=flower.flower_name, flower_image=flower.flower_image,
-                               flower_meaning=flower.flower_description, title='Flower', session_id=session['username'])
+                            flower_meaning=flower.flower_description, title='Flower', session_id=session['username'])
+
 
 @pages_view.route("/flower_error")
 def test_redirect():
@@ -35,7 +36,7 @@ def test_redirect():
 
 
 @pages_view.errorhandler(404)
-def error_404_handler(error):
+def error_404(error):
     return render_template("error_404.html")
 
 
@@ -45,11 +46,11 @@ def login():
     login_form = LoginForms()
     if login_form.validate_on_submit():
         log_user = User.query.filter_by(name=login_form.username.data).first()
-        if log_user.password == login_form.password.data :
+        if log_user.password == login_form.password.data:
                 session['username'] = login_form.username.data
                 return redirect(url_for('pages_view.home_page'))
         else:
-            pass
+            redirect(url_for('page_view.sign_in'))
     return render_template("login.html", title="Login", form=login_form)
 
 
