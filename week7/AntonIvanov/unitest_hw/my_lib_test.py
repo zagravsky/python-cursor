@@ -1,5 +1,5 @@
 import unittest
-from unittest import TestCase, mock
+from unittest import TestCase
 import my_lib as ml
 
 
@@ -28,7 +28,7 @@ class BookShelfTest(TestCase):
 
     def test_take_book(self):
         self.assertEqual(self.class_instance.take_book(1), self.book_inst)
-
+        self.assertEqual(self.class_instance.take_book(2), "No such index")
 
 
 if __name__ == '__main__':

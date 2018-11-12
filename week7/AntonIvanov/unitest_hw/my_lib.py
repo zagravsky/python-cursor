@@ -24,14 +24,3 @@ class BookShelf:
             return self.__books_list.pop(index)
         except IndexError:
             return "No such index"
-
-
-if __name__ == '__main__':
-    b = Book('Arthur Canonndale', "Sherlok Holmes")
-    b1 = Book('Arthur Canonndale', "Sherlok Holmes")
-    bsh = BookShelf()
-    bsh += b
-    bsh += b1
-    print(bsh.description)
-    print(bsh.take_book(0))
-    print(bsh.take_book(1))
