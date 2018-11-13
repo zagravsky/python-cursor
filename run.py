@@ -16,3 +16,5 @@ if __name__ == '__main__':
     print(sort_members(members))
     print(dec_to_roman(6))
     print(dec_to_roman(13))
+    print(dec_to_roman(4000))
+    print(dec_to_roman(-4))
