@@ -8,13 +8,8 @@ class Developer():
     def __str__(self):
         return f"{self.name} - {self.years_experience} years, {self.language}"
 
-
-
     def __call__(self):
         return f"I use {self.language} to write code. It is class Developer() magic method"
-
-
-
 
     def about(self):
         if self.years_experience <= 3:
@@ -49,7 +44,3 @@ class RubyDeveloper(Developer):
 
     def write_code(self):
         print(f"I use {self.language} to write code")
-
-
-
-
