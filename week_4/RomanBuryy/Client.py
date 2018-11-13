@@ -1,6 +1,5 @@
 import requests
 import json
-import os
 
 
 def get_response():
@@ -13,10 +12,6 @@ def get_response():
         }
     }
     response = requests.post(url, data=json.dumps(data))
-
-
-
-
 
     if response.status_code >= 500:
         return response.status_code, "I am dead"

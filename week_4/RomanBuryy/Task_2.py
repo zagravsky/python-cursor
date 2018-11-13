@@ -1,6 +1,5 @@
 from flask import Flask
 from flask import request
-
 import json
 
 app = Flask(__name__)
@@ -17,7 +16,6 @@ def add_member(name, age, gender):
     return json.dumps(response_data)
 
 
-
 def response_data(name):
     header = {"jsonrpc": "2.0"}
     header['result'] = MEMBERS[name]
@@ -26,9 +24,6 @@ def response_data(name):
 
 def get_member(name):
     return json.dumps(MEMBERS[name])
-
-
-
 
 
 METHODS = {

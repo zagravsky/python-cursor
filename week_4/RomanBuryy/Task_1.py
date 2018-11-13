@@ -1,10 +1,7 @@
 import json
-
 import flask
 from flask import Flask
 from flask import request
-
-# from settings import PORT, HOST
 
 app = Flask(__name__)
 
@@ -52,22 +49,17 @@ def profile(name: str):
     return json.dumps(result)
 
 
-
-########################################### Task #1 ########################################
-
-
 @app.route('/members', methods=['GET'])
 def dump_members():
 
     if flask.request.method == 'GET':
         str_members = json.dumps(MEMBERS)
-        json.dump(str_members, open("MEMBERS.json", "w"))
+        file = open("MEMBERS.json", "w")
+        json.dump(str_members, file)
+        file.close()
         return "MEMBERS.json created"
 
 
 if __name__ == '__main__':
     server_settings = json.load(open("server_settings.json", "r"))
     app.run(port=server_settings["port"], host=server_settings["host"], debug=server_settings["debug"])
-
-
-########################################### End Task #1 ########################################
