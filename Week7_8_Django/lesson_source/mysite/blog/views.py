@@ -1,10 +1,11 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from .models import Article
 from django.shortcuts import render, get_object_or_404, redirect
 from .forms import NewArticleForm
 from django.views.generic import ListView, DetailView, CreateView, FormView, View
 from django.urls import reverse
 from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth import login, logout
 
 
 class IndexView(ListView):
@@ -36,3 +37,15 @@ class LoginFormView(FormView):
     form_class = AuthenticationForm
     template_name = "login.html"
     success_url = '/'
+
+    def form_valid(self, form):
+        self.user = form.get_user()
+        login(self.request, self.user)
+        return super(LoginFormView, self).form_valid(form)
+
+
+class LogoutView(View):
+
+    def get(self, request):
+        logout(request)
+        return HttpResponseRedirect('/')
