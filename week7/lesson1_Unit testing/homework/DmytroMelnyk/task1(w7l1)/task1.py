@@ -16,10 +16,10 @@ class Book:
 
 
 class Bookshelf:
-    book_shelf = []
 
     def __init__(self, book):
         self.book = book
+        self.book_shelf = []
 
     def __add__(self, book):
         self.book_shelf.append(book)
