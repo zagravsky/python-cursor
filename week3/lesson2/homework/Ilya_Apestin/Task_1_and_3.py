@@ -6,14 +6,15 @@ class Developer:
 
     def about(self):
         if self.years_experience <= 3:
-            print(f"My name is {self.name} and I am a Junior Developer.")
+            position = "Junior"
         elif self.years_experience <= 5:
-            print(f"My name is {self.name} and I am a Middle Developer.")
+            position = "Middle"
         else:
-            print(f"My name is {self.name} and I am a Senior Developer.")
+            position = "Senior"
+        return f"My name is {self.name} and I am {position} Developer"
 
     def write_code(self):
-        print("I am a developer and I write code.")
+        return "I am a developer and I write code."
 
     def __str__(self):
         return f"{self.name} - {self.years_experience}, {self.language}"
@@ -28,7 +29,7 @@ class PythonDeveloper(Developer):
         self.language = language
 
     def write_code(self):
-        print("I use %s to write code." % self.language)
+        return f"I use {self.language} to write code."
 
 
 class JavaDeveloper(Developer):
@@ -37,7 +38,7 @@ class JavaDeveloper(Developer):
         self.language = language
 
     def write_code(self):
-        print("I use %s to write code." % self.language)
+        return f"I use {self.language} to write code."
 
 
 class RubyDeveloper(Developer):
@@ -46,20 +47,20 @@ class RubyDeveloper(Developer):
         self.language = language
 
     def write_code(self):
-        print("I use %s to write code." % self.language)
+        return f"I use {self.language} to write code."
 
 
 dev_1 = PythonDeveloper(2, 'John Connor')
-dev_1.about()
-dev_1.write_code()
+print(dev_1.about())
+print(dev_1.write_code())
 
 dev_2 = JavaDeveloper(4, 'Sara Connor')
-dev_2.about()
-dev_2.write_code()
+print(dev_2.about())
+print(dev_2.write_code())
 
 dev_3 = RubyDeveloper(8, 'T800')
-dev_3.about()
-dev_3.write_code()
+print(dev_3.about())
+print(dev_3.write_code())
 
 
 class ITcompany:
@@ -79,13 +80,12 @@ class ITcompany:
         return view_list
 
     def fire(self, fire_name):
-        for i, o in enumerate(self.list_devs):
-            if o.name == fire_name:
-                del self.list_devs[i]
-                print(f'{fire_name} has been fired.')
-                return self
+        for i in self.list_devs:
+            if i.name == fire_name:
+                self.list_devs.remove(i)
+                return f'{fire_name} has been fired.'
         else:
-            return print(f'There is no developer with name {fire_name} in the company')
+            return f'There is no developer with name {fire_name} in the company'
 
 
 dev_4 = PythonDeveloper(18, 'T1000')
@@ -101,7 +101,7 @@ it_comp += dev_4
 it_comp += dev_5
 it_comp += dev_6
 
-it_comp.fire('T1000')
-it_comp.fire('Alfred')
+print(it_comp.fire('T1000'))
+print(it_comp.fire('Alfred'))
 
 print(it_comp)
