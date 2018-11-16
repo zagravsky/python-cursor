@@ -1,4 +1,20 @@
 from werkzeug.security import generate_password_hash, check_password_hash
+from .app_database import db
+
+class UsersTable(db.Model):
+    __tablename__ = 'users'
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    username = db.Column(db.String(30))
+    email = db.Column(db.String(40))
+    age = db.Column(db.INTEGER)
+    password_hash = db.Column(db.String(100))
+
+    def __init__(self, username, email, age, password_hash):
+        self.usename = username
+        self.email = email
+        self.age = age
+        self.password_hash = password_hash
+
 
 class User:
     def __init__(self,user):

@@ -7,6 +7,12 @@ class Config:
     TEST_VARIABLE = "Config"
     DEBUG = False
     TESTING = False
+    PG_USER = "antonio"
+    PG_PASSWORD = "1111"
+    PG_HOST = "localhost"
+    PG_PORT = 5432
+    DB_NAME = "bikedb"
+    SQLALCHEMY_DATABASE_URI = f"postgresql://{PG_USER}:{PG_PASSWORD}@{PG_HOST}:{PG_PORT}/{DB_NAME}"
 
 
 class DevConfig(Config):

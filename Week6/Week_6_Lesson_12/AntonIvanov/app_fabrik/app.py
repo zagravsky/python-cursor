@@ -8,5 +8,6 @@ def set_mode():
     test_var = current_app.config.get("TEST_VARIABLE")
     session['mode'] = test_var
 
+
 if __name__ == "__main __":
     app.run()
