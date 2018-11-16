@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+
+ {% if session.username %}<div class="alert alert-success">Hi {{ session.username }}</div>{% endif %}
+ {% if session.get('mode') == "Test Config" %}
+    <div class="alert alert-success">{{ session.mode }} mode</div>
+ {% endif %}
+
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+     <div class="alert alert-info">
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+     </div>
+    {% endif %}
+{% endwith %}
+
+    {% block content %}
+    {% endblock content %}
+    <script src="{{ url_for('static', filename='bootstarap/js/jquery-3.3.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='bootstarap/js/popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='bootstarap/js/bootstrap.min.js') }}"></script>
+</body>
+</html>

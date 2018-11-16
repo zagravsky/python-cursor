@@ -1,0 +1,16 @@
+.bg-1 {
+       background-color: #1abc9c; /* Green */
+       color: #ffffff;
+
+    }
+.container-fluid {
+    padding: 80px 120px;
+}
+.panel-body{
+    font-size: 2em;
+}
+a.custom-card,
+a.custom-card:hover {
+  color: inherit;
+  margin: 20px;
+}

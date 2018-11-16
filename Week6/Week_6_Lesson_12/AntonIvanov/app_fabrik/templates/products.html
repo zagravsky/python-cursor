@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block title %}Product List{% endblock %}
+{% block content %}
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="{{ url_for('home.home') }}">Site about Bikes</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="{{ url_for('products.products') }}">Bikes List</a></li>
+    </ul>
+        {% include 'usernav.html' %}
+    </div>
+</nav>
+<div class="container-fluid text-center bg-1 ">
+    <h2>Our bikes list</h2>
+</div>
+<div class="container">
+    <div class="row">
+    {% for item in data %}
+        <div class="col-sm-4">
+            <a href="{{ url_for('products.bike', name=item) }}" class="custom-card">
+              <div class="card" style="width: 15rem; display: inline-block">
+                <img class="card-img-top" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title" style="color:black;">{{ item }}</h4>
+                  <p class="card-text" style="color:#555;">Some quick example text to build on the card title.</p>
+                </div>
+              </div>
+            </a>
+        </div>
+    {% endfor %}
+        <div class="col-sm-4">
+        <a href="/products/x" class="custom-card">
+              <div class="card" style="width: 15rem; display: inline-block">
+                <img class="card-img-top" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title" style="color:black;">Broken link</h4>
+                  <p class="card-text" style="color:#555;">Some quick example text to build on the card title.</p>
+                </div>
+              </div>
+            </a>
+        </div>
+    </div>
+
+</div>
+
+{% endblock content %}

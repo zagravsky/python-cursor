@@ -1,0 +1,23 @@
+<ul class="nav navbar-nav navbar-right">
+    <li>
+        <a href="{{ url_for('register.register') }}">
+        <span class="glyphicon glyphicon-user"></span>Register
+        </a>
+    </li>
+    {% if session.username %}
+        <li>
+            <a href="{{ url_for('logout.logout') }}">
+                <span class="glyphicon glyphicon-log-in"></span> Logout
+            </a>
+        </li>
+    {% else %}
+        <li>
+            <a href="{{ url_for('login.login') }}">
+                <span class="glyphicon glyphicon-log-in"></span> Login
+            </a>
+        </li>
+    {% endif %}
+    {% if session.mode == "Test Config" %}
+        <li><a href="{{ url_for('test.test') }}">Test</a></li>
+    {% endif %}
+</ul>
