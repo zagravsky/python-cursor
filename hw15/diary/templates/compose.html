@@ -1,0 +1,16 @@
+{% load static %}
+<body background="{% static 'background2.png' %}">
+<center><a href="{% url 'index' %}"><img src="{% static 'journal-logo.png' %}" height="73" width="400"></a></center>
+<br>
+<br>
+<br>
+<form action="{% url 'compose' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Create post">
+</form>
+<br>
+<br>
+<br>
+<a href="{% url 'index' %}"><i>Back to Journal</i></a>
+</body>
