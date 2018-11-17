@@ -5,6 +5,7 @@ from .forms import RegisterForm, LoginForm
 from functools import wraps
 from .db import BIKES
 from .models import User
+from .models import UsersTable
 import json
 
 
@@ -20,6 +21,8 @@ def login_required(f):
 
 class HomeView(MethodView):
     def get(self):
+        # names = UsersTable.query.first()
+        # print(names)
         return render_template("home.html")
 
 
