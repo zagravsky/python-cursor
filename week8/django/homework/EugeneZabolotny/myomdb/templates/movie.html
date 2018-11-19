@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Movie{% endblock %}
+
+{% block content %}
+    <h1 class="text-center my-5">Movie</h1>
+
+    <div class="row">
+        <div class="col-3 col-md-2"><span class="font-weight-bold">ID: </span></div>
+        <div class="col-9 col-md-10">{{ movie.id }}</div>
+    </div>
+    <div class="row">
+        <div class="col-3 col-md-2"><span class="font-weight-bold">Title: </span></div>
+        <div class="col-9 col-md-10">{{ movie.title }}</div>
+    </div>
+    <div class="row">
+        <div class="col-3 col-md-2"><span class="font-weight-bold">Description: </span></div>
+        <div class="col-9 col-md-10">{{ movie.description }}</div>
+    </div>
+{% endblock %}
