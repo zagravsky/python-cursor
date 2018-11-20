@@ -1,0 +1,7 @@
+<form action="{% url 'update_article' form.instance.id %}" method="post">
+    {% csrf_token %}
+    {{ form.title }}
+    {{ form.description }}
+    {{form.author.as_hidden}}
+    <input type="submit" value="Submit">
+</form>

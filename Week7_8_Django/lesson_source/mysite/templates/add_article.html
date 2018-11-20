@@ -1,0 +1,7 @@
+<form action="{% url 'add_article' %}" method="post">
+    {% csrf_token %}
+    {{ form.title }}
+    {{ form.description }}
+    {{form.author.as_hidden}}
+    <input type="submit" value="Submit">
+</form>
