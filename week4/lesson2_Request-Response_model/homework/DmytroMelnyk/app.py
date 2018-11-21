@@ -29,15 +29,13 @@ def developer_controller():
 
 @app.route('/remove_developer')
 def remove_developer():
-    if len(DEVELOPERS):
+    if DEVELOPERS:
         DEVELOPERS.pop(random.choice(list(DEVELOPERS.keys())))
         return show_devs()
-    else:
-        return 'DEVELOPERS list is empty - There are not devs in list'
+    return 'DEVELOPERS list is empty - There are not devs in list'
 
 
 @app.route('/show')
 def show_devs():
-    str_to_print = ''
     list_to_print = ['{} {}-{}'.format(v["first_name"], v["last_name"], v["programming_language"]) for _, v in DEVELOPERS.items()]
-    return str_to_print.join('\n' + i for i in list_to_print)
+    return ''.join(i for i in list_to_print)
