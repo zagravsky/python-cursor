@@ -1,6 +1,7 @@
 from werkzeug.security import generate_password_hash, check_password_hash
 from .app_database import db
 
+
 class UsersTable(db.Model):
     __tablename__ = 'users'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
@@ -10,24 +11,27 @@ class UsersTable(db.Model):
     password_hash = db.Column(db.String(100))
 
     def __init__(self, username, email, age, password_hash):
-        self.usename = username
+        self.username = username
         self.email = email
         self.age = age
         self.password_hash = password_hash
 
-
-class User:
-    def __init__(self,user):
-        self.username = user['username']
-        self.password_hash = user['password_hash']
-        self.email = user['email']
-        self.age = user['age']
-
     def __repr__(self):
         return '<User {}>'.format(self.username)
 
-    def set_password(self, password):
-        self.password_hash = generate_password_hash(password)
+class BikeTable(db.Model):
+    __tablename__ = 'bikes'
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    name = db.Column(db.String(30))
+    brand = db.Column(db.String(20))
+    type = db.Column(db.String(10))
+    wheel_size = db.Column(db.String(5))
 
-    def check_password(self, password):
-        return check_password_hash(self.password_hash, password)
+    def __init__(self, name, brand, type, wheel_size):
+        self.name = name
+        self.brand = brand
+        self.type = type
+        self.wheel_size = wheel_size
+
+    def __repr__(self):
+        return f"<Bike {self.brand}-{self.name}>"

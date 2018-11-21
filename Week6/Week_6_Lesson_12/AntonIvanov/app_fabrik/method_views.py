@@ -1,12 +1,10 @@
 from flask import Blueprint, render_template, abort, flash, redirect, url_for, session, request, current_app
 from flask.views import MethodView
-from werkzeug.security import generate_password_hash
+from werkzeug.security import generate_password_hash, check_password_hash
 from .forms import RegisterForm, LoginForm
 from functools import wraps
-from .db import BIKES
-from .models import User
-from .models import UsersTable
-import json
+from .app_database import db
+from .model import UsersTable, BikeTable
 
 
 def login_required(f):
@@ -16,26 +14,26 @@ def login_required(f):
             flash('Login or register to get access to this page')
             return redirect(url_for('home.home'))
         return f(*args, **kwargs)
+
     return decorated_function
 
 
 class HomeView(MethodView):
     def get(self):
-        # names = UsersTable.query.first()
-        # print(names)
         return render_template("home.html")
 
 
 class ProductListView(MethodView):
     @login_required
     def get(self, name=None):
-        bike_names = [elem['name'] for elem in BIKES]
+        bike_names = BikeTable.query.with_entities(BikeTable.name).order_by(BikeTable.name).all()
+        bike_names = [i[0] for i in bike_names]
         if name is None:
+            print(bike_names)
             return render_template("products.html", data=bike_names)
         elif name in bike_names:
-            for i, elem in enumerate(BIKES):
-                if elem['name'] == name:
-                    return render_template("bike.html", data=BIKES[i])
+            query = BikeTable.query.filter_by(name=name).first()
+            return render_template("bike.html", data=query)
         else:
             return abort(404)
 
@@ -52,30 +50,17 @@ class RegisterView(MethodView):
     def post(self):
         form = RegisterForm()
         if form.validate_on_submit():
-            user = User(
-                {
-                    'username': form.username.data,
-                    'email': form.email.data,
-                    'age': form.age.data,
-                    'password_hash': generate_password_hash(form.password.data)
-                }
-            )
-            with open('users.json', 'r') as f:
-                USERS = json.load(f)
-                user_list = USERS['users']
-            if user.username in [elem['username'] for elem in user_list]:
-                flash(f'username {user.username} is exists')
+            query = UsersTable.query.filter_by(username=form.username.data).first()
+            if query is None:
+                user = UsersTable(form.username.data, form.email.data, form.age.data,
+                                  generate_password_hash(form.password.data))
+                db.session.add(user)
+                db.session.commit()
+                flash(f'{user.username} is registered')
+                return redirect(url_for('home.home'))
+            else:
+                flash(f'username {form.username.data} is exists')
                 return render_template('register.html', form=form)
-            USERS['users'].append({
-                'username': user.username,
-                'email': user.email,
-                'age': user.age,
-                'password_hash': user.password_hash
-            })
-            flash('{} is registered'.format(user.username))
-            with open('users.json', 'w') as f:
-                json.dump(USERS, f)
-            return redirect(url_for('home.home'))
         return render_template('register.html', form=form)
 
 
@@ -87,17 +72,15 @@ class LoginView(MethodView):
     def post(self):
         form = LoginForm()
         if form.validate_on_submit():
-            with open('users.json', 'r') as f:
-                user_list = json.load(f)['users']
-            user_models_list = [User(i) for i in user_list]
-            for user in user_models_list:
-                if form.username.data == user.username and user.check_password(form.password.data):
-                    session.permanent = True
-                    session['username'] = user.username
-                    flash('{} is loged in'.format(user.username))
-                    return redirect(url_for('home.home'))
+            query = UsersTable.query.filter_by(username=form.username.data).first()
+            if query and check_password_hash(query.password_hash, form.password.data):
+                session.permanent = True
+                session['username'] = form.username.data
+                flash(f'{form.username.data} is logged in')
+                return redirect(url_for('home.home'))
             flash("Username or password is incorrect")
         return render_template('login.html', form=form)
+
 
 class LogoutView(MethodView):
     def get(self):
@@ -116,6 +99,7 @@ class TestView(MethodView):
         mode = session.get('mode')
         return f'You are in {mode} mode. To get access to this page enter in TEST mode'
 
+
 # Task 2
 home = Blueprint('home', __name__, static_folder='static', template_folder='templates')
 home.add_url_rule('/', view_func=HomeView.as_view('home'))
@@ -132,6 +116,6 @@ login.add_url_rule('/login', view_func=LoginView.as_view('login'))
 
 logout = Blueprint('logout', __name__, static_folder='static', template_folder='templates')
 logout.add_url_rule('/logout', view_func=LogoutView.as_view('logout'))
-#Task 5
+# Task 5
 test = Blueprint('test', __name__, static_folder='static', template_folder='templates')
 test.add_url_rule('/test', view_func=TestView.as_view('test'))

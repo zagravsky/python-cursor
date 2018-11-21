@@ -13,6 +13,7 @@ class Config:
     PG_PORT = 5432
     DB_NAME = "bikedb"
     SQLALCHEMY_DATABASE_URI = f"postgresql://{PG_USER}:{PG_PASSWORD}@{PG_HOST}:{PG_PORT}/{DB_NAME}"
+    SQLALCHEMY_TRACK_MODIFICATIONS = True
 
 
 class DevConfig(Config):

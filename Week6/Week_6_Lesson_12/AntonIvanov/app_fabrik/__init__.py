@@ -2,10 +2,13 @@ from flask import Flask
 from .api import factory_api, bike_api
 from .method_views import home, products, page_not_found, register, login, logout, test
 from .config import runtime_config
+from .app_database import db, ma
 
 
 def run_app():
     app = Flask(__name__)
+    db.init_app(app)
+    ma.init_app(app)
     app.config.from_object(runtime_config())
     app.register_blueprint(factory_api)
     app.register_blueprint(bike_api)
