@@ -1,5 +1,6 @@
 <form action="{% url 'update_article' form.instance.id %}" method="post">
     {% csrf_token %}
     {{ form.as_p }}
+    {{ form.media }}
     <input type="submit" value="Submit">
 </form>
