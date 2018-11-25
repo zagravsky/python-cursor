@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>REST API Visualisation</title>
+</head>
+<body>
+
+    <h1>Hello, This is REST API CARS HELP Visualisation</h1>
+    <hr>
+
+    <!-- GET LIST OF CAR -->
+    <h5>Get list of all cars:</h5>
+    <a href="{{url_for('apicars.get_cars')}}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true"> GET </a>
+    <hr>
+
+    <!-- GET CAR MODEL -->
+    <h5>Get car model</h5>
+    <h6>Selelect from a list: </h6>
+    <div class="dropdown show">
+      <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        GET
+      </a>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          {% for car in carbase %}
+            <a class="dropdown-item" href="{{url_for('apicars.get_car', car_model=car.Model)}}">{{ car.Model }}</a>
+          {% endfor %}
+      </div>
+    </div>
+    <hr>
+
+
+
+    <!-- DELETE A CAR -->
+    <h5>Delete car model</h5>
+    <h6>Selelect from a list: </h6>
+    <div class="dropdown show">
+      <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        DEL
+      </a>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          {% for car in carbase %}
+            <a class="dropdown-item" href="{{url_for('apicars.del_car', car_model=car.Model)}}">{{ car.Model }}</a>
+          {% endfor %}
+      </div>
+    </div>
+    <hr>
+
+
+
+    <!-- ADD A NEW CAR -->
+    <h5>Add new car to a list of cars:</h5>
+
+    <p>
+      <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+        POST
+      </a>
+    </p>
+    <div class="collapse" id="collapseExample">
+      <div class="card card-body">
+          <form action="{{url_for('apicars.add_car')}}" method="POST">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="Horsepower">Horsepower:</label>
+                        <input type="text" class="form-control" id='Horsepower' placeholder="Horsepower">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="mark">Mark</label>
+                        <input type="text" class="form-control" name="Mark" id="Mark" placeholder="Mark">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="Model">Model</label>
+                        <input type="text" class="form-control" name="Model" id="Model" placeholder="Model">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="Origin">Origin</label>
+                        <input type="text" class="form-control" name="Origin" id="Origin" placeholder="Origin">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="Year">Year</label>
+                        <input type="date" class="form-control" name="Year" id="Year" placeholder="Year">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-secondary">ADD</button>
+            </form>
+      </div>
+    </div>
+    <hr>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
+
+
+
+
