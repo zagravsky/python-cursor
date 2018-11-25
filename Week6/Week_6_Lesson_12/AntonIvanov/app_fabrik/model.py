@@ -19,6 +19,7 @@ class UsersTable(db.Model):
     def __repr__(self):
         return '<User {}>'.format(self.username)
 
+
 class BikeTable(db.Model):
     __tablename__ = 'bikes'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
