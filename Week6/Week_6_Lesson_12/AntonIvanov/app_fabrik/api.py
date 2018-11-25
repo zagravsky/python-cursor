@@ -1,7 +1,9 @@
 from flask import Blueprint, request, jsonify
 from flask.views import MethodView
 from flask import current_app
-from .db import BIKES
+from .app_database import db
+from .model import BikeTable
+from .schema import bike_schema, bikes_schema
 import json
 
 
@@ -16,18 +18,26 @@ class FabrikApiView(MethodView):
 class BikesView(MethodView):
     def get(self, name=None):
         if name is None:
-            return jsonify(BIKES)
-        elif name in [elem['name'] for elem in BIKES]:
-            for i, elem in enumerate(BIKES):
-                if elem['name'] == name:
-                    return jsonify(BIKES[i])
+            bikes = BikeTable.query.all()
+            result = bikes_schema.dump(bikes).data
+            return jsonify(result)
         else:
-            return jsonify({"status": "Fail", "message": "I don't know about such bike. Sorry"})
+            bike = BikeTable.query.filter_by(name=name).first()
+            if bike is not None:
+                result = bike_schema.dump(bike).data
+                return jsonify(result)
+        return jsonify({"status": "Fail", "message": "I don't know about such bike. Sorry"})
 
     def post(self):
-        params = json.loads(request.data.decode('utf-8'))
-        BIKES.append(params)
-        return jsonify({"status": "OK", "message": f"Add new bikes {params}"})
+        data = request.get_json()
+        try:
+            new_bike = BikeTable(**data)
+            db.session.add(new_bike)
+            db.session.commit()
+            result = bike_schema.dump(new_bike).data
+            return jsonify({"status": "OK", "newbike": result})
+        except TypeError as e:
+            return jsonify({"status": "Fail", "message": str(e)})
 
     def delete(self, name: str):
         if name in [elem['name'] for elem in BIKES]:
