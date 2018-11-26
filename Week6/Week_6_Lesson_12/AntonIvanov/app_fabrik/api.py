@@ -16,13 +16,13 @@ class FabrikApiView(MethodView):
 
 
 class BikesView(MethodView):
-    def get(self, name=None):
-        if name is None:
+    def get(self, id=None):
+        if id is None:
             bikes = BikeTable.query.all()
             result = bikes_schema.dump(bikes).data
             return jsonify(result)
         else:
-            bike = BikeTable.query.filter_by(name=name).first()
+            bike = BikeTable.query.filter_by(id=id).first()
             if bike is not None:
                 result = bike_schema.dump(bike).data
                 return jsonify(result)
@@ -39,13 +39,42 @@ class BikesView(MethodView):
         except TypeError as e:
             return jsonify({"status": "Fail", "message": str(e)})
 
-    def delete(self, name: str):
-        if name in [elem['name'] for elem in BIKES]:
-            for i, elem in enumerate(BIKES):
-                if elem['name'] == name:
-                    return jsonify(BIKES.pop(i))
+    def delete(self, id: int):
+        bike = BikeTable.query.filter_by(id=id).first()
+        if bike is not None:
+            db.session.delete(bike)
+            db.session.commit()
+            result = bike_schema.dump(bike).data
+            return jsonify({"status": "OK", "deleted_bike": result})
         else:
             return jsonify({"status": "Fail", "message": "I don't know about such bike. Sorry"})
+
+    def put(self, id):
+        bike = BikeTable.query.filter_by(id=id).first()
+        if bike is not None:
+            data = request.get_json()
+            brand = data.get("brand")
+            name = data.get("name")
+            type = data.get("type")
+            wheel_size = data.get("wheel_size")
+            if brand is not None:
+                bike.brand = brand
+            if name is not None:
+                bike.name = name
+            if type is not None:
+                bike.type = type
+            if wheel_size is not None:
+                bike.wheel_size = wheel_size
+            db.session.commit()
+            result = bike_schema.dump(bike).data
+            return jsonify({"status": "OK", "updated_bike": result})
+        return jsonify({"status": "Fail", "message": "I don't know about such bike. Sorry"})
+
+
+
+
+
+
 
 
 #
@@ -54,4 +83,4 @@ factory_api.add_url_rule('/factory', view_func=FabrikApiView.as_view('factory_ap
 # Task1
 bike_api = Blueprint('bikes_api', __name__)
 bike_api.add_url_rule('/bike', view_func=BikesView.as_view('bikes_api'))
-bike_api.add_url_rule('/bike/<string:name>', view_func=BikesView.as_view('bike_api'))
+bike_api.add_url_rule('/bike/<int:id>', view_func=BikesView.as_view('bike_api'))
