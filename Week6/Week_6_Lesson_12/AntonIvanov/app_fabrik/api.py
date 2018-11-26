@@ -2,7 +2,7 @@ from flask import Blueprint, request, jsonify
 from flask.views import MethodView
 from flask import current_app
 from .app_database import db
-from .model import BikeTable
+from .model import BikeTable, BrandsTable
 from .schema import bike_schema, bikes_schema
 import json
 
@@ -18,9 +18,9 @@ class FabrikApiView(MethodView):
 class BikesView(MethodView):
     def get(self, id=None):
         if id is None:
-            bikes = BikeTable.query.all()
-            result = bikes_schema.dump(bikes).data
-            return jsonify(result)
+            bikes = BikeTable.query.join(BrandsTable, BrandsTable.id == BikeTable.brand_id).all()
+            print(bikes)
+            return bikes_schema.jsonify(bikes)
         else:
             bike = BikeTable.query.filter_by(id=id).first()
             if bike is not None:

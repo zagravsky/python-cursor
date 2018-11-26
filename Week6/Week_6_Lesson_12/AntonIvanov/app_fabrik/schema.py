@@ -1,4 +1,5 @@
 from .app_database import ma
+from .model import BikeTable
 
 
 class UserSchema(ma.ModelSchema):
@@ -11,7 +12,16 @@ users_schema = UserSchema(many=True)
 
 class BikeSchema(ma.ModelSchema):
     class Meta:
-        fields = ('id', 'name', 'brand', 'type', 'wheel_size')
+        # fields = ('id', 'name', 'brand_id', 'bike_type', 'wheel_size','')
+        model = BikeTable
 
 bike_schema = BikeSchema()
 bikes_schema = BikeSchema(many=True)
+
+
+class BrandSchema(ma.ModelSchema):
+    class Meta:
+        fields = ('id', 'name')
+
+brand_schema = BrandSchema()
+braands_schema = BrandSchema(many=True)
