@@ -1,6 +1,5 @@
-from werkzeug.security import generate_password_hash, check_password_hash
+from werkzeug.security import generate_password_hash
 from .app_database import db
-from sqlalchemy.orm import relationship, backref
 
 
 class UsersTable(db.Model):
@@ -25,7 +24,10 @@ class BrandsTable(db.Model):
     __tablename__ = 'brands'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     name = db.Column(db.String(20))
-    bikes = db.relationship('BikeTable', backref="brand")
+    bikes = db.relationship('BikeTable', backref='brand', lazy='subquery')
+
+    def __init__(self, name):
+        self.name = name
 
 
 class BikeTable(db.Model):

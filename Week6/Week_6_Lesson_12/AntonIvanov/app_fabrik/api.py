@@ -1,10 +1,10 @@
 from flask import Blueprint, request, jsonify
 from flask.views import MethodView
 from flask import current_app
+from sqlalchemy import inspect
 from .app_database import db
 from .model import BikeTable, BrandsTable
 from .schema import bike_schema, bikes_schema
-import json
 
 
 class FabrikApiView(MethodView):
@@ -18,30 +18,34 @@ class FabrikApiView(MethodView):
 class BikesView(MethodView):
     def get(self, id=None):
         if id is None:
-            bikes = BikeTable.query.join(BrandsTable, BrandsTable.id == BikeTable.brand_id).all()
-            print(bikes)
+            bikes = BikeTable.query.all()
             return bikes_schema.jsonify(bikes)
         else:
             bike = BikeTable.query.filter_by(id=id).first()
             if bike is not None:
                 result = bike_schema.dump(bike).data
+                result['brand_name'] = bike.brand.name
                 return jsonify(result)
         return jsonify({"status": "Fail", "message": "I don't know about such bike. Sorry"})
 
     def post(self):
         data = request.get_json()
-        try:
-            new_bike = BikeTable(**data)
-            db.session.add(new_bike)
-            db.session.commit()
-            result = bike_schema.dump(new_bike).data
-            return jsonify({"status": "OK", "newbike": result})
-        except TypeError as e:
-            return jsonify({"status": "Fail", "message": str(e)})
+        brand = BrandsTable.query.filter_by(name=data['brand']).first()
+        if brand is None:
+            brand = BrandsTable(data['brand'])
+            db.session.add(brand)
+        new_bike = BikeTable(data['name'], brand.id, data['bike_type'], data['wheel_size'])
+        db.session.add(new_bike)
+        db.session.commit()
+        print(new_bike.brand.name)
+        result = bike_schema.dump(new_bike).data
+        return jsonify({"status": "OK", "new_bike": result})
 
     def delete(self, id: int):
         bike = BikeTable.query.filter_by(id=id).first()
         if bike is not None:
+            # print('***************************************')
+            # print(inspect(bike))
             db.session.delete(bike)
             db.session.commit()
             result = bike_schema.dump(bike).data
@@ -53,16 +57,16 @@ class BikesView(MethodView):
         bike = BikeTable.query.filter_by(id=id).first()
         if bike is not None:
             data = request.get_json()
-            brand = data.get("brand")
+            brand_id = data.get("brand_id")
             name = data.get("name")
-            type = data.get("type")
+            bike_type = data.get("bike_type")
             wheel_size = data.get("wheel_size")
-            if brand is not None:
-                bike.brand = brand
+            if brand_id is not None:
+                bike.brand_id = brand_id
             if name is not None:
                 bike.name = name
             if type is not None:
-                bike.type = type
+                bike.bike_type = bike_type
             if wheel_size is not None:
                 bike.wheel_size = wheel_size
             db.session.commit()
