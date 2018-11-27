@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load bootstrap %}
+
+{% block content %}
+    <div class="text mt-4">
+        <h2 class="text-xl-center font-italic">Add new mineral to database.</h2>
+    </div>
+    <div class="container mb-5 mt-5">
+        <form action="{% url 'create_new_min' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form|bootstrap_horizontal }}
+            <button type="submit" class="btn-dark">Save</button>
+        </form>
+    </div>
+{% endblock %}
