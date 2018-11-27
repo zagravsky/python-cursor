@@ -24,7 +24,7 @@ class BrandsTable(db.Model):
     __tablename__ = 'brands'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     name = db.Column(db.String(20))
-    bikes = db.relationship('BikeTable', backref='brand', lazy='subquery')
+    bikes = db.relationship('BikeTable', backref='brand', passive_deletes='all')
 
     def __init__(self, name):
         self.name = name

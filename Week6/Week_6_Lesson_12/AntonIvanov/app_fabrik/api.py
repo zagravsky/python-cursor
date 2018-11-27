@@ -1,7 +1,8 @@
 from flask import Blueprint, request, jsonify
 from flask.views import MethodView
 from flask import current_app
-from sqlalchemy import inspect
+from sqlalchemy.orm.exc import MultipleResultsFound, NoResultFound
+
 from .app_database import db
 from .model import BikeTable, BrandsTable
 from .schema import bike_schema, bikes_schema
@@ -42,16 +43,25 @@ class BikesView(MethodView):
         return jsonify({"status": "OK", "new_bike": result})
 
     def delete(self, id: int):
-        bike = BikeTable.query.filter_by(id=id).first()
-        if bike is not None:
-            # print('***************************************')
-            # print(inspect(bike))
+        # bike = BikeTable.query.filter_by(id=id).first()
+        # if bike is not None:
+        #     db.session.delete(bike)
+        #     db.session.commit()
+        #     result = bike_schema.dump(bike).data
+        #     return jsonify({"status": "OK", "deleted_bike": result})
+        # else:
+        #     return jsonify({"status": "Fail", "message": "I don't know about such bike. Sorry"})
+        try:
+            bike = BikeTable.query.filter_by(id=id).one()
+            print(bike)
             db.session.delete(bike)
             db.session.commit()
             result = bike_schema.dump(bike).data
             return jsonify({"status": "OK", "deleted_bike": result})
-        else:
-            return jsonify({"status": "Fail", "message": "I don't know about such bike. Sorry"})
+        except MultipleResultsFound as e:
+            return jsonify({"status": "Fail", "message": e})
+        except NoResultFound as e:
+            return jsonify({"status": "Fail", "message": e})
 
     def put(self, id):
         bike = BikeTable.query.filter_by(id=id).first()
@@ -65,7 +75,7 @@ class BikesView(MethodView):
                 bike.brand_id = brand_id
             if name is not None:
                 bike.name = name
-            if type is not None:
+            if bike_type is not None:
                 bike.bike_type = bike_type
             if wheel_size is not None:
                 bike.wheel_size = wheel_size
@@ -73,12 +83,6 @@ class BikesView(MethodView):
             result = bike_schema.dump(bike).data
             return jsonify({"status": "OK", "updated_bike": result})
         return jsonify({"status": "Fail", "message": "I don't know about such bike. Sorry"})
-
-
-
-
-
-
 
 
 #
