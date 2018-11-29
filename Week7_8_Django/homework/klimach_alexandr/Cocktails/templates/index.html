@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}Cocktail Blog{% endblock %}
+
+{% block content %}
+        <table class="table">
+            <thead class="thead-light">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Author</th>
+                <th scope="col">Date</th>
+            </tr>
+            </thead>
+            <tbody>
+                {% for cocktail in object_list %}
+                    <tr>
+                        <th scope="row">{{ cocktail.id }}</th>
+                        <td><a href="{% url 'detail' cocktail.id %}">{{ cocktail.name }}</a></td>
+                        <td>{{ cocktail.author }}</td>
+                        <td>{{ cocktail.create_date }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ cocktail.name }}{% endblock %}
+
+{% block content %}
+        <p class="font-weight-bold text-center">{{ cocktail.name }}</p>
+        <p class="font-italic">{{ cocktail.recipe }}</p>
+        <p class="text-justify">{{ cocktail.info }}</p>
+        <p class="font-weight-bold text-right">{{ cocktail.author }}</p>
+{% endblock %}
