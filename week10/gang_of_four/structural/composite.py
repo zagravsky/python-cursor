@@ -47,9 +47,13 @@ class Order:
 if __name__ == "__main__":
 
     apple = Product(price=2)
+    lemon = Product(price=5)
+    fruit_box = Box()
+    fruit_box.add_product(lemon)
+    fruit_box.add_product(apple)
     water_box = Box()
     for i in range(1, 3):
         water_box.add_product(Product(price=i))
-
-    order = Order(positions=[apple, water_box])
+    fruit_box.add_product(water_box)
+    order = Order(positions=[fruit_box])
     print(order.total_price())
