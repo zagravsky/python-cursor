@@ -36,16 +36,18 @@ class Director:
     def __init__(self):
         self._builder = None
 
-    def set_builder(self, builder: Builder):
-        self._builder = builder
+    def set_builder(self, input_builder: Builder):
+        self._builder = input_builder
 
-    def get_figure(self):
+    def get_figure(self, custom_builder: Builder = None):
+        builder = custom_builder if custom_builder else self._builder
+
         figure = Figure()
 
-        color = self._builder.get_color()
+        color = builder.get_color()
         figure.set_color(color)
 
-        shape = self._builder.get_shape()
+        shape = builder.get_shape()
         figure.set_shape(shape)
 
         return figure
@@ -92,15 +94,15 @@ class RedLineBuilder(Builder):
 
 
 if __name__ == "__main__":
+    director = Director()
 
     builder = BlueCircleBuilder()
-    director = Director()
     director.set_builder(builder)
 
     figure = director.get_figure()
 
     figure.who_i_am()
     print("Next Figure")
-    director.set_builder(RedLineBuilder())
-    figure = director.get_figure()
+    # director.set_builder(RedLineBuilder())
+    figure = director.get_figure(RedLineBuilder())
     figure.who_i_am()
