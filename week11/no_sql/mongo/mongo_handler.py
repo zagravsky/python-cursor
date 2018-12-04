@@ -14,9 +14,14 @@ if __name__ == "__main__":
     our_first_row = {"key": "name",
                      "value": "Denis"}
 
-    collection.insert(our_first_row)
+    our_rows = [
+        {"key": "name", "value": 1235},
+        {"key": "Some Lisy", "value": [1, 2, 4, 5, 6, 8]},
+        {"new_one": "Ups"}
+    ]
 
-    result = collection.find_one()
+    collection.insert_many(our_rows)
 
-    print(f"Lets see what we have {result}")
+
+    # print(f"Lets see what we have {result}")
 
