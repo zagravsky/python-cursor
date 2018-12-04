@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Articles</title>
+</head>
+<body>
+    {% load static %}
+    <img src="{% static 'cat.jpg' %}" alt="funny cat">
+    {% for article in articles %}
+        <p>{{ article.title }}</p>
+    {% endfor %}
+</body>
+</html>
