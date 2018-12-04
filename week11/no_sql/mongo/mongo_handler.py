@@ -1,5 +1,8 @@
 import pymongo
 
+import re
+
+
 if __name__ == "__main__":
 
     db_name = "lection"
@@ -22,6 +25,11 @@ if __name__ == "__main__":
 
     collection.insert_many(our_rows)
 
+    regx = re.compile("^S", re.IGNORECASE)
 
+    result = collection.find_one({"key": regx})
+    for row in result:
+        print(row)
+        print(type(row))
     # print(f"Lets see what we have {result}")
 
