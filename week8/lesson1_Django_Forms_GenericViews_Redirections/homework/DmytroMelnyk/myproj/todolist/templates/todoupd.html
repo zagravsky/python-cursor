@@ -1,0 +1,13 @@
+{% include 'partials/header.html' %}
+
+    <form action="{% url 'todoupdate' todo.id %}" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Update">
+    </form>
+    <br>
+    <a href="/home">Go Back</a>
+
+
+{% include 'partials/footer.html' %}
+

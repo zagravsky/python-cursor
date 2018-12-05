@@ -1,12 +1,33 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+
     <title>TodoList</title>
 </head>
 <body>
     <header>
-        <h1>TodoList</h1>
-        <a href="{% url 'add'%}">Add Todo</a>
+        <div>
+            {% if user.is_authenticated %}
+                <h1 style="text-align:center;">TodoList - {{user.username}}</h1>
+                <a class="btn btn-info" href="{% url 'logout'%}">LogOut</a>
+                <a class="btn btn-info" href="{% url 'add'%}">Add Todo</a>
+            {% else %}
+                <h1 style="text-align:center;">You did not Authenticated!</h1>
+                <h3 style="text-align:center;">Please Log In at first.</h3>
+
+                <a  class="btn btn-info" style="text-align:center;" href="{% url 'login' %}">login</a>
+
+            {% endif %}
+        </div>
         <hr>
     </header>
+
+
+
+
+
+

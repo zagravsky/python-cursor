@@ -1,0 +1,28 @@
+{% include 'partials/header.html' %}
+    {% if user.is_authenticated %}
+    <ul>
+        {% for todo in object_list %}
+        <div>
+
+            <li>
+                <a href="{% url 'details' todo.id %}">{{todo.title}}</a>
+                <!--Delete-->
+                <form action="{% url 'tododelete' todo.id %}" method="post" style="display: inline;">
+                    {% csrf_token %}
+                    <input type="hidden" name="todo_id" value="{{ todi.id }}"/>
+                    <button type="submit" class="btn btn-default btn-sm">
+                        <span class="glyphicon glyphicon-trash"></span>
+                    </button>
+                </form>
+
+                <!--Update-->
+                <a href="{% url 'todoupdate' todo.id %}" class="btn btn-default btn-sm" tabindex="-1" role="button" aria-disabled="true"><span class="glyphicon glyphicon-refresh"></span></a>
+                Created_by: {{todo.created_by}}
+            </li>
+        </div>
+
+
+        {% endfor %}
+    </ul>
+    {% endif %}
+{% include 'partials/footer.html' %}
