@@ -2,7 +2,7 @@
     <a href="/home"><< Go Back</a>
 
     <h1>{{todo.title}}</h1>
-    <p>{{todo.text}}</p>
+    <p>{{todo.text|safe}}</p>
     <!--<p>{{todo.created_by}}</p>-->
     <br>
     Created/modified on {{todo.create_at}}

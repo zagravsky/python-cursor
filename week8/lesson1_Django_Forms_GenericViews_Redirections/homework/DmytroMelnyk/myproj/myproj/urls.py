@@ -30,7 +30,7 @@ urlpatterns = [
 
     path('login/', LoginFormView.as_view(), name='login'),
     path('logout/', LogoutView.as_view(), name='logout'),
-
     path('ckeditor/', include('ckeditor_uploader.urls')),
+
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
