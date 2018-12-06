@@ -1,0 +1,16 @@
+{% load static %}
+<body background="{% static 'background2.jpg' %}" style="padding-right:150; padding-left:150">
+<center><a href="{% url 'index' %}"><img src="{% static 'journal-logo.png' %}" height="73" width="400"></a></center>
+<br>
+<br>
+<br>
+    <form action="{% url 'update' form.instance.id %}" method="post">
+        {% csrf_token %}
+        <h3>{{ form.as_p }}</h3>
+        <input type="submit" value="Update post">
+    </form>
+<br>
+<br>
+<br>
+<a href="{% url 'index' %}"><i>Back to Journal</i></a>
+</body>

@@ -1,0 +1,18 @@
+{% load static %}
+<body background="{% static 'background2.jpg' %}" style="padding-right:150; padding-left:150">
+<center><a href="{% url 'index' %}"><img src="{% static 'journal-logo.png' %}" height="73" width="400"></a></center>
+<a href="{% url 'index' %}"><i>Back to Journal</i></a>
+<h2>{{post.title}}</h2>
+<h4><i>by: {{post.author}}</i></h4>
+<p>{{post.content}}</p>
+<br>
+<br>
+<br>
+<a href="{% url 'update' post.id %}"><i>Edit</i></a>
+<br>
+<br>
+<a href="{% url 'delete' post.id %}"><i>Delete</i></a>
+<br>
+<br>
+<a href="{% url 'compose' %}"><i>New post</i></a>
+

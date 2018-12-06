@@ -1,0 +1,17 @@
+{% load static %}
+<body background="{% static 'background2.jpg' %}" style="padding-right:150; padding-left:150">
+<center><a href="{% url 'index' %}"><img src="{% static 'journal-logo.png' %}" height="73" width="400"></a></center>
+<br>
+<br>
+<br>
+        <form action="" method="post">
+            {% csrf_token %}
+            <p>Are you sure you want to delete "{{ object.title }}"?</p>
+            <input type="submit" value="Confirm"/>
+            <button><a href="{% url 'content' object.id %}">Cancel</a></button>
+        </form>
+<br>
+<br>
+<br>
+<a href="{% url 'index' %}"><i>Back to Journal</i></a>
+</body>

@@ -1,0 +1,16 @@
+{% load static %}
+<body background="{% static 'background2.jpg' %}" style="padding-right:150; padding-left:150">
+<center><img src="{% static 'journal-logo.png' %}" height="73" width="400"></center>
+<a href="{% url 'compose' %}"><p align="right" style="font-size: 20px"><i>New post</i></p></a>
+{% for post in object_list %}
+    <h2><a href="{% url 'content' post.id %}">{{post.title}}</a></h2>
+    <h4><i>by: {{post.author}}</i></h4>
+    <p>{{post.content}}</p>
+<br>
+<br>
+<br>
+{% endfor %}
+<a href="{% url 'compose' %}"><p style="font-size: 20px"><i>New post</i></p></a>
+<br>
+<br>
+</body>
