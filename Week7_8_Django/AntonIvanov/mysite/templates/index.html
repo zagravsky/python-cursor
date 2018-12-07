@@ -5,10 +5,10 @@
     <title>Articles</title>
 </head>
 <body>
-    {% load static %}
-    <img src="{% static 'cat.jpg' %}" alt="funny cat">
     {% for article in articles %}
-        <p>{{ article.title }}</p>
+    <p><a href="{% url 'detail' article.id %}">{{ article.title }}</a></p>
     {% endfor %}
+        {% load static %}
+    <img src="{% static 'cat.jpg' %}" alt="funny cat">
 </body>
 </html>
