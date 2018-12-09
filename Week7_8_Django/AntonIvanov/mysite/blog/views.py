@@ -19,7 +19,7 @@ def add_article(request):
         form = NewArticleForm(request.POST)
         if form.is_valid():
             form.save()
-            # return redirect
+            return redirect('index')
     else:
         form = NewArticleForm()
     return render(request, 'add_article.html', {'form': form})

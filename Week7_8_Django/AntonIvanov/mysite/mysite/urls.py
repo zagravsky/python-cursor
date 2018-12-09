@@ -19,7 +19,7 @@ from blog.views import index, detail, add_article
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index),
+    path('', index, name='index'),
     path('article/<int:article_id>/', detail, name='detail'),
     path('article/add/', add_article, name='add_article')
 ]
