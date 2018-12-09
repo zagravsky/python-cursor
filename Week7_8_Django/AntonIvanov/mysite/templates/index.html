@@ -5,7 +5,7 @@
     <title>Articles</title>
 </head>
 <body>
-    {% for article in articles %}
+    {% for article in object_list %}
     <p><a href="{% url 'detail' article.id %}">{{ article.title }}</a></p>
     {% endfor %}
         {% load static %}
