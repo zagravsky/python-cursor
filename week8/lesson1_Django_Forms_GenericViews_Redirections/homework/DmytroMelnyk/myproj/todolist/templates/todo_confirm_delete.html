@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<ul>
+    <h2>Confirm DELETE!</h2>
+    <h3>{{ object.title }}</h3>
+    <div class="row">
+        <form action="" method="post">{% csrf_token %}
+            <p>Are you sure you want to delete "{{ object.title }}"?</p>
+            <input type="submit" value="Confirm" class="btn btn-warning">
+            <button><a href="{% url 'details' todo.id %}">Cancel</a></button>
+        </form>
+    </div>
+</ul>
+
+{% endblock %}
+
+
+
+
+
+

@@ -17,7 +17,8 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from todolist.views import IndexView, TodoDetailView, TodoAddView, TodoUpdate, TodoDelete, LoginFormView, LogoutView, HomeView
+from todolist.views import IndexView, TodoDetailView, TodoAddView, TodoUpdate, TodoDelete, LoginFormView, LogoutView, \
+    HomeView, RegisterView, ProfileView, EditProfileView
 
 urlpatterns = [
     path('', IndexView.as_view(), name='index'),
@@ -30,7 +31,13 @@ urlpatterns = [
 
     path('login/', LoginFormView.as_view(), name='login'),
     path('logout/', LogoutView.as_view(), name='logout'),
+
     path('ckeditor/', include('ckeditor_uploader.urls')),
 
+    path('accounts/register/', RegisterView.as_view(), name="register"),
+    path('accounts/profile/', ProfileView.as_view(), name="profile"),
+    path('accounts/profile/edit/', EditProfileView.as_view(), name="edit_profile"),
 
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+] + static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS) +\
+              static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

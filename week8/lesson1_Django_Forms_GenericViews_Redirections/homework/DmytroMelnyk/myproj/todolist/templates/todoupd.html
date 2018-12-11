@@ -1,6 +1,9 @@
-{% include 'partials/header.html' %}
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
 
-    <form action="{% url 'todoupdate' todo.id %}" method="POST">
+
+    <form action="{% url 'todoupdate' todo.id %}" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
         <input type="submit" value="Update">
@@ -8,6 +11,4 @@
     <br>
     <a href="/home">Go Back</a>
 
-
-{% include 'partials/footer.html' %}
-
+{% endblock %}

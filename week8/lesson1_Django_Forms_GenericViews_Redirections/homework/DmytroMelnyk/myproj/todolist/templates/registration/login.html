@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+
+    <div class="container content">
+        <h2 class="text-center">Log in to your ToDo List:</h2>
+        <div class="text-center">
+            <img src="{% static 'img/network.png' %}">
+            {% if form.errors %}
+                <p>Your username and password did not match. Please try again.</p>
+            {% endif %}
+
+            <br>
+            <br>
+            <br>
+        </div>
+    </div>
+
+
+    <div class="container content" style="text-align: center;">
+        <div style="display: inline-block; width: 300px;">
+            <form action="{% url 'login' %}" method="POST">
+                {% csrf_token %}
+                <p>{{form.username}}</p>
+                <p>{{form.password}}</p>
+                <button type="submit">Sign in</button>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}
+

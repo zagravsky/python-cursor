@@ -1,3 +1,9 @@
-{% include 'partials/header.html' %}
-<h1>Something</h1>
-{% include 'partials/footer.html' %}
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+    <div class="container" style="text-align: center">
+        <h1>Welcome!</h1>
+        <h3>This is your personal todo list in skydrive</h3>
+        <h3>You must register only and you may use it</h3>
+    </div>
+{% endblock %}

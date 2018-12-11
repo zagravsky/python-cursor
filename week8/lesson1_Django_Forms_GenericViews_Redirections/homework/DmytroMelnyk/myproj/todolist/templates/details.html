@@ -1,6 +1,9 @@
-{% include 'partials/header.html' %}
-    <a href="/home"><< Go Back</a>
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
 
+    <a href="/home"><< Go Back</a>
+    <ul>
     <h1>{{todo.title}}</h1>
     <p>{{todo.text|safe}}</p>
     <!--<p>{{todo.created_by}}</p>-->
@@ -21,7 +24,8 @@
             <!--Update-->
             <a href="{% url 'todoupdate' todo.id %}" class="btn btn-default btn-sm" tabindex="-1" role="button" aria-disabled="true"><span class="glyphicon glyphicon-refresh"></span></a>
         </div>
-    </p>
-{% include 'partials/footer.html' %}
+        </p>
+    </ul>
+{% endblock %}
 
 
