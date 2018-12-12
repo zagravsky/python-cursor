@@ -4,7 +4,7 @@ def filter_o_left(l: list)->list:
     :param l: input list of dict
     :return: filtered list
     """
-    return list(filter(lambda x: 'o' in x['name'], l))
+    return list(filter(lambda x: 'o' in x['name'].lower(), l))
 
 
 if __name__ == '__main__':

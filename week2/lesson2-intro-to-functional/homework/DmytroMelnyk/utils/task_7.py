@@ -4,15 +4,18 @@ def convert_dec_roman(inp)->str:
     :param inp: arabian num
     :return: Roman num
     """
-    for k, v in to_roman.items():
-        if inp == k:
-            return v
-        if inp > k:
-            temp = v
-            temp1 = k
+    if inp<4000:
+        for k, v in to_roman.items():
+            if inp == k:
+                return v
+            if inp > k:
+                temp = v
+                temp1 = k
 
-    remain = inp - temp1
-    return temp + convert_dec_roman(remain)
+        remain = inp - temp1
+        return temp + convert_dec_roman(remain)
+    else:
+        return 'MAX inp must be less then 4000'
 
 
 if __name__ == '__main__':
@@ -24,3 +27,4 @@ if __name__ == '__main__':
                 2000: 'MM', 3000: 'MMM'}
 
     print(convert_dec_roman(78))
+    print(convert_dec_roman(4003))
