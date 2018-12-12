@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import time
 from abc import abstractmethod, ABC
 
 
@@ -19,10 +20,12 @@ class Figure:
     def __init__(self):
         self.__color: Color = None
         self.__shape: Shape = None
+        self.time = None
 
     def who_i_am(self):
         print(f"My color is {self.__color.color}")
         print(f"My shape is {self.__shape.shape}")
+        print(f"My shape is {self.time}")
 
     def set_color(self, color):
         self.__color = color
@@ -50,6 +53,8 @@ class Director:
         shape = builder.get_shape()
         figure.set_shape(shape)
 
+        figure.time = builder.get_creation_time()
+
         return figure
 
 
@@ -67,6 +72,10 @@ class Builder(ABC):
     def get_shape(self):
         raise NotImplementedError
 
+    @abstractmethod
+    def get_creation_time(self):
+        raise NotImplementedError
+
 
 class BlueCircleBuilder(Builder):
 
@@ -80,6 +89,9 @@ class BlueCircleBuilder(Builder):
         shape.shape = "Circle"
         return shape
 
+    def get_creation_time(self):
+        return time.time()
+
 
 class RedLineBuilder(Builder):
     def get_color(self):
@@ -91,6 +103,9 @@ class RedLineBuilder(Builder):
         shape = Shape()
         shape.shape = "Line"
         return shape
+
+    def get_creation_time(self):
+        return time.time()
 
 
 if __name__ == "__main__":

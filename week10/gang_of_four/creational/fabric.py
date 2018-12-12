@@ -35,3 +35,7 @@ def create_fig(name):
 if __name__ == "__main__":
     fig = create_fig("circle")
     fig.who_am_i()
+
+    figure_two = Circle()
+    new_line = Line()
+    new_line.who_am_i()

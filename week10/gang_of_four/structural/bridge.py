@@ -22,7 +22,6 @@ class Shape(ABC):
 
 
 class Circle(Shape):
-
     def show_my_shape(self):
         print("I am circle")
 
@@ -33,7 +32,6 @@ class Square(Shape):
 
 
 class Red(Color):
-
     def show_my_color(self):
         print("I am red")
 
