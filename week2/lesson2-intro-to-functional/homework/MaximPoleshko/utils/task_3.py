@@ -1,4 +1,3 @@
-def add_load(memb: list) -> list:
-    for m in memb:
-      m['load'] = m['age'] / 200 * 100
-    return memb
+def add_load(members: list):
+    members = list(filter(lambda x: x["age"] < 200, members))
+    return list(map(lambda x: {'age': x['age'], 'name': x['name'], 'load': x["age"] * 0.5}, members))
