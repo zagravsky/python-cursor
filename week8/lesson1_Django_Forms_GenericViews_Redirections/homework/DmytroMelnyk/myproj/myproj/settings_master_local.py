@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'k)ne^*g8p7s()#ez2$-wd=$n)lgj)@yow89lb_lb*gzy9ptz^3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ["Ekut.pythonanywhere.com"]
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -121,13 +121,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
-if not DEBUG:
-        STATIC_ROOT = 'var/www/staticfiles/'
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'collected_static')
+
 MEDIA_URL = '/media/'
-if not DEBUG:
-        MEDIA_ROOT = 'var/www/media/'
+MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'media')
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "todolist/static"),
 ]
+
 CKEDITOR_UPLOAD_PATH = 'uploads/'
 CKEDITOR_IMAGE_BACKEND = "pillow"
