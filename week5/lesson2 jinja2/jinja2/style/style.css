@@ -1,0 +1,14 @@
+.navbar{
+        list-style: none;
+        justify-content: center;
+        }
+
+.navbar .navbar-link.active{
+                            background: red;
+                            }
+
+
+.navbar-link {display: block;
+              padding: 10px;
+              border-radius: 10px;
+              }

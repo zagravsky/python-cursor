@@ -1,0 +1,9 @@
+<div class="container">
+      <ul class="navbar">
+          {% for page in pages %}
+          <li class="nav-ite">
+            <a class="navbar-link {% if page.name==name %}active{% endif %}" href="{{ page.href }}">{{ page.caption }}</a>
+            {% endfor %}
+          </li>
+      </ul>
+</div>

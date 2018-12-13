@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<head>
+{% include 'navbar/jinja2-navbar.html' %}
+{% include 'includes/jinja2-meta-style.html' %}
+</head>
+<body>
+<table class="table table-striped">
+    {% include 'includes/jinja2-table.html' %}
+    {% for row in rows %}
+        {% include 'includes/jinja2-row.html' %}
+    {% endfor %}
+</table>
+{% include 'includes/jinja2-footer.html' %}
+</body>
+</html>

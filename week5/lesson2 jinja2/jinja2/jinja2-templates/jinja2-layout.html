@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf8"/>
+    <link rel="stylesheet" href="style/bootstrap.min.css"/>
+    <link rel="stylesheet" href="style/style.css"/>
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+  <body>
+    {% include 'navbar/jinja2-navbar.html' %}
+    <h1>Книга учёта</h1>
+    <h2>Расходы за {{ date }}</h2>
+    {% block content %}
+    {% endblock %}
+    {% block footer %}
+    <p>Posted by: Maxim Poleshko</p>
+    <p>Contact information: <a href="mailto:MaximPoleshko@gmail.com">
+    MaximPoleshko@gmail.com</a>.</p>
+    {% endblock %}
+  </body>
+</html>
