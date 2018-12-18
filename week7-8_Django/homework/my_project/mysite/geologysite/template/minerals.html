@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container border-bottom border-dark my-3" style="border-width: 5px !important;">
+        <h2 class="property font-italic">Database of minerals</h2>
+    </div>
+    <div class="container">
+        <div class="ml-5">
+            {% for mineral in object_list %}
+                <a href="{{ mineral.get_absolute_url }}"><p>{{ mineral.name }}</p></a>
+            {% empty %}
+                <p class="text-center text-info">Sorry the database of minerals are empty.</p>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}}

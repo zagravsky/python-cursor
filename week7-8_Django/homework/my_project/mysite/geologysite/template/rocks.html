@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container border-bottom border-dark my-3" style="border-width: 5px !important;">
+        <h2 class="property font-italic">Database of rocks</h2>
+    </div>
+    <div class="container">
+
+
+        {% for rock in object_list %}
+
+                <a class="text-dark" href="{{ rock.get_absolute_url }}">
+                    <div class="media border rounded bg-white my-3">
+                        <img class="rounded mx-2 mt-2" width="200" height="auto" src="{{ MEDIA_URL }}{{ rock.avatar }}">
+                        <div class="media-body mx-2">
+                            <h5 class="my-2">{{ rock.name }}</h5>
+                            <div class="dropdown-divider"></div>
+                            <p class="ellipsis">{{ rock.description|truncatewords:80 }}</p>
+                        </div>
+                    </div>
+                </a>
+
+        {% empty %}
+
+            <div class="alert alert-info my-5">
+                <p class="text-center">Sorry the database are empty.</p>
+            </div>
+
+        {% endfor %}
+
+    </div>
+
+{% endblock %}}

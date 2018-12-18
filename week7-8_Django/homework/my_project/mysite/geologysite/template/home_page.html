@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load my_filter %}
+
+{% block content %}
+
+    <div class="container my-5">
+
+        <h2 class="border-bottom border-dark mt-3 w-75" style="border-width: 5px !important;"><span>Latest publications</span></h2>
+
+        <div id="carouselExampleIndicators" class="carousel slide" style="height: 400px !important; width: 700px !important;" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            </ol>
+            <div class="carousel-inner" style="height: 400px !important; width: 700px !important;">
+
+                {% for article in last_articles %}
+                    {% if forloop.counter0 == 0 %}
+
+                        <div class="carousel-item active" >
+                            <a href="{{ article.get_absolute_url }}">
+                                <div class="card text-white">
+                                    <img class="card-img" src="{{ article.body|img_path }}">
+                                    <img class="position-absolute card-img" src="{{ MEDIA_URL }}xkofnweg.jpg">
+                                    <div class="card-img-overlay">
+                                        <h2 class="card-title font-italic font-weight-bold">{{ article.title }}</h2>
+                                        <p><span class="badge badge-info">New</span> </p>
+                                        <p class="text-white">{{ article.date_publication|date:"F j, Y" }}</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                    {% else %}
+
+                        <div class="carousel-item">
+                            <a href="{{ article.get_absolute_url }}">
+                                <div class="card text-white">
+                                    <img class="card-img" src="{{ article.body|img_path }}">
+                                    <img class="position-absolute card-img" src="{{ MEDIA_URL }}xkofnweg.jpg">
+                                    <div class="card-img-overlay">
+                                        <h2 class="card-title font-italic font-weight-bold">{{ article.title }}</h2>
+                                        <p><span class="badge badge-info">New</span> </p>
+                                        <p class="text-white">{{ article.date_publication|date:"F j, Y" }}</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{%  load my_filter %}
+
+{% block content %}
+
+    <div class="container d-flex my-4 border-bottom border-dark" style="border-width: 5px !important;">
+        <div class="p-2"><h1 class="text-left font-italic">All articles</h1></div>
+        <div class="ml-auto p-2"><a class="btn btn-link bg-dark text-light justify-content-end" href="{% url 'create_article' %}">Create new article</a></div>
+    </div>
+    <div class="container">
+        <div class="card-columns mt-2">
+
+            {% for article in object_list %}
+
+                <div class="card">
+                    <img class="card-img-top" alt="" src="{{ article.body|img_path }}">
+                    <div class="card-body">
+                        <h4 class="card-title">{{ article.title }}</h4>
+                        <p class="card-text visible text-muted text-right">{{ article.date_publication|date:"F j, Y" }}</p>
+                        <a class="btn btn-primary" href="{{ article.get_absolute_url }}">Read article</a>
+                    </div>
+                </div>
+
+            {% endfor %}
+
+        </div>
+     </div>
+
+{% endblock %}

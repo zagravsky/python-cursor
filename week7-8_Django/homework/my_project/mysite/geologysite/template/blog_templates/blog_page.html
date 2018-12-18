@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container">
+        <a class="page-link bg-dark text-light" href="{% url 'create_article' %}">Add new article</a>
+        <a class="page-link bg-dark text-light" href="{% url 'all_articles' %}">List of all articles</a>
+    </div>
+    <div class="container">
+        <div class="container">
+            <h2 class="border-bottom border-dark mt-3" style="border-width: 5px !important;"><span>Latest publications</span></h2>
+        </div>
+    </div>
+{% endblock %}

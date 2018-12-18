@@ -1,0 +1,49 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #062c33" role="navigation">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-toggle="collapse"  data-target="#MyNavbar" aria-controls="MyNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            Menu
+        </button>
+        <div class="d-flex justify-content-start align-items-stretch collapse navbar-collapse" id="MyNavbar">
+            <ul class="navbar-nav p-1 d-flex justify-content-between">
+                <li class="nav-item p-2 mx-2 active">
+                   <a class="nav-link font-weight-bold" href="{% url 'home_page' %}"><h5>Home</h5></a>
+                </li>
+                <li class="nav-item p-2 mx-2" style="border-left:1px solid rgba(71,70,71,0.75);height: auto">
+                    <a class="nav-link" href="{% url 'list_minerals' %}">Minerals</a>
+                </li>
+                <li class="nav-item dropdown p-2 mx-2" style="border-left:1px solid #474647;height:auto">
+                    <a class="nav-link dropdown-toggle" id="DropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Rocks
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="DropdownMenu">
+                        <a class="dropdown-item" href="{% url 'list_rocks' 'igneous' %}">Igneous rocks</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{% url 'list_rocks' 'sedimentary' %}">Sedimentary rocks</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{% url 'list_rocks' 'metamorphic' %}">Metamorphic Rocks</a>
+                    </div>
+                </li>
+                <li class="nav-item p-2 mx-2" style="border-left:1px solid #474647;height:auto">
+                    <a class="nav-link" href="{% url 'blog_page' %}">Blog</a>
+                </li>
+            </ul>
+        </div>
+        <div class="d-inline-flex align-items-end">
+            <ul class="navbar-nav p-2">
+                {% if user.is_authenticated %}
+                <li class="nav-item p-2 d-flex flex-row-reverse align-items-center">
+                    <a class="nav-link btn btn-primary p-2 " role="button" href="{% url 'logout' %}">Log out</a>
+                    <p class="p-2 text-white mr-2">Welcome {{ user.username }}</p>
+                </li>
+                {% else %}
+                <li class="nav-item p-2">
+                    <a class="nav-link btn btn-primary" role="button" href="{% url 'login' %}">Log in</a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>

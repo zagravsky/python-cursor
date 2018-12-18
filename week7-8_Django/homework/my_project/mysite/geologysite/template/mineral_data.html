@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}
+    {{ object.name }}
+{% endblock %}
+{% block content %}
+    <h1 class="mt-1 ml-2">{{ object.name }}</h1>
+    <div class="media mt-4 ml-2">
+        <img class="mr-5 rounded img-fluid" width="500" height="500" src="{{ MEDIA_URL }}{{ object.avatar }}">
+        <div class="media-body">
+            <h2 class="border-info bg-dark text-light">Property</h2>
+            <p class="ml-3">Name: {{object.name}}</p>
+            <p class="ml-3">Formula: {{object.formula}}</p>
+            <p class="ml-3">Luster: {{object.luster}}</p>
+            <p class="ml-3">Colour: {{object.colour}}</p>
+            <p class="ml-3">Streak: {{object.streak}}</p>
+            <p class="ml-3">Density: {{object.density}}</p>
+            <p class="ml-3">Hardness: {{object.hardness}}</p>
+
+            <h2 class="border-info bg-dark text-light">Description</h2>
+            <p class="ml-3">{{object.description}}</p>
+        </div>
+    </div>
+{% endblock %}}
