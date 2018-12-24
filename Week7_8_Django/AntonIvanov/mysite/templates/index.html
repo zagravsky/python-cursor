@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bikes</title>
+</head>
+<body>
+    {% for bike in bikes %}
+        <p><a href="{% url 'detail' bike.id %}">{{ bike.name }}</a></p>
+    {% endfor %}
+</body>
+</html>
