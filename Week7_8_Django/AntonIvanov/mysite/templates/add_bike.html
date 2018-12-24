@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add</title>
+</head>
+<body>
+    <form action="{% url 'add_bike' %}" method="post">
+        {% csrf_token %}
+        <span>Bike name</span>
+        <input type="text" name="name" id="name"><br>
+        <span>Bike brand</span>
+        <input type="text" name="brand" id="brand"><br>
+        <span>Bike type</span>
+        <input type="text" name="bike_type" id="bike_type"><br>
+        <span>Bike wheel size</span>
+        <input type="text" name="wheel_size" id="wheel_size"><br>
+        <input type="submit" value="Create Bike">
+    </form>
+    <hr>
+    <a href="{% url 'index' %}">Back</a>
+</body>
+</html>

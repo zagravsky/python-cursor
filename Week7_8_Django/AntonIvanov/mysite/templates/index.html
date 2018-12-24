@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <title>Bikes</title>
 </head>
-<body>
+<a>
     {% for bike in bikes %}
         <p><a href="{% url 'detail' bike.id %}">{{ bike.name }}</a></p>
     {% endfor %}
+<hr>
+    <a href="{% url 'add_bike' %}">Add Bike</a>
 </body>
 </html>
