@@ -1,5 +1,7 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from .models import Bike
+from .forms import NewBikeForm
+from django.views.generic import ListView, DetailView, CreateView
 
 
 def index(request):
@@ -14,10 +16,10 @@ def detail(request, bike_id):
 
 def add_bike(request):
     if request.POST:
-        Bike.objects.create(
-            name=request.POST.get('name'),
-            brand=request.POST.get('brand'),
-            bike_type=request.POST.get('bike_type'),
-            wheel_size=request.POST.get('wheel_size'),
-        )
-    return render(request, 'add_bike.html')
+        form = NewBikeForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('index')
+    else:
+        form = NewBikeForm()
+    return render(request, 'add_bike.html', {'form': form})
