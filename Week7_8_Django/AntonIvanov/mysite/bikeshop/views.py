@@ -8,10 +8,11 @@ def index(request):
     bikes = Bike.objects.all()
     return render(request, 'index.html', {'bikes': bikes})
 
-
+# one bike
 def detail(request, bike_id):
     bike = get_object_or_404(Bike, pk=bike_id)
     return render(request, 'detail.html', {'bike': bike})
+
 
 
 def add_bike(request):
