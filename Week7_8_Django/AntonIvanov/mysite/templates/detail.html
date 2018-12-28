@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{ bike.name }}</title>
-</head>
-<body>
+{% extends 'main.html' %}
+
+{% block title %}
+    {{ bike.name }}
+{% endblock %}
+{% block content %}
     <p>{{ bike.id }}</p>
     <p>{{ bike.name }}</p>
     <p>{{ bike.brand }}</p>
@@ -12,5 +11,4 @@
     <p>{{ bike.wheel_sze }}</p>
     <hr>
     <a href="{% url 'index' %}">Back</a>
-</body>
-</html>
+{% endblock %}

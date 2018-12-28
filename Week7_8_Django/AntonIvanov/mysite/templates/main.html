@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+{% load staticfiles %}
+<img src="{% static "bike.png" %}" alt="bike"style="width:100px">
+{% block content %}
+{% endblock %}
+</body>
+</html>

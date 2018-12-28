@@ -1,26 +1,23 @@
-from django.shortcuts import render, get_object_or_404, redirect
 from .models import Bike
 from .forms import NewBikeForm
 from django.views.generic import ListView, DetailView, CreateView
+from django.urls import reverse
 
 
-def index(request):
-    bikes = Bike.objects.all()
-    return render(request, 'index.html', {'bikes': bikes})
-
-# one bike
-def detail(request, bike_id):
-    bike = get_object_or_404(Bike, pk=bike_id)
-    return render(request, 'detail.html', {'bike': bike})
+class IndexView(ListView):
+    model = Bike
+    template_name = 'index.html'
 
 
+class BikeDetailView(DetailView):
+    model = Bike
+    template_name = "detail.html"
 
-def add_bike(request):
-    if request.POST:
-        form = NewBikeForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('index')
-    else:
-        form = NewBikeForm()
-    return render(request, 'add_bike.html', {'form': form})
+
+class BikeCreateView(CreateView):
+    model = Bike
+    template_name = "add_bike.html"
+    form_class = NewBikeForm
+
+    def get_success_url(self):
+        return reverse('detail',args=(self.object.id, ))

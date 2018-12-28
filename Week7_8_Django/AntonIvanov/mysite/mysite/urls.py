@@ -15,11 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from bikeshop.views import index, detail, add_bike
+from bikeshop.views import IndexView, BikeDetailView, BikeCreateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index, name='index'),
-    path('bike/<int:bike_id>/', detail, name='detail'),
-    path('bike/add/', add_bike, name='add_bike')
+    path('', IndexView.as_view(), name='index'),
+    path('bike/<int:pk>/', BikeDetailView.as_view(), name='detail'),
+    path('bike/add/', BikeCreateView.as_view(), name='add_bike')
 ]
