@@ -1,5 +1,5 @@
-{% load static %}
 <!doctype html>
+{% load static %}
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -12,6 +12,12 @@
     <title>{% block title %}{% endblock %}</title>
   </head>
   <body>
+    {% if user.is_authenticated %}
+      <p> Hi {{ user.username }}</p>
+      <a class="btn btn-info" href="{% url 'logout' %}">logout</a>
+    {% else %}
+      <a class="btn btn-info" href="{% url 'login' %}">login</a>
+    {% endif %}
     {%  block content%}{% endblock %}
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
