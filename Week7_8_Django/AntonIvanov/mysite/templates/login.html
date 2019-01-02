@@ -1,12 +1,13 @@
 {% extends 'base.html' %}
-{% block title %}Add article{% endblock %}
+{% block title %}Add user{% endblock %}
 {%  block content %}
 <div class="container">
-    <h2>Add article</h2>
+    <h2>Add User</h2>
     <form action="{% url 'add_article'%}" method="post">
         {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Submit">
+        {{ form.username }}
+        {{ form.password }}
+    <input type="submit" value="Sign in">
     </form>
 </div>
 {% endblock %}

@@ -1,14 +1,18 @@
-# from django.shortcuts import render, get_object_or_404, redirect
-# from django.http import HttpResponse
 from .models import Article
 from .forms import NewArticleForm
-from django.views.generic import ListView, DetailView, CreateView
+from django.views.generic import ListView, DetailView, CreateView, FormView, View
 from django.urls import reverse
+from django.contrib.auth.forms import AuthenticationForm
 
 
 class IndexView(ListView):
     model = Article
     template_name = 'index.html'
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super(IndexView, self).get_context_data()
+        context['page_title'] = "All articles"
+        return context
 
 
 class ArticleDetailView(DetailView):
@@ -24,16 +28,8 @@ class ArticleCreateView(CreateView):
     def get_success_url(self):
         return reverse('detail', args=(self.object.id, ))
 
-# def detail(request, article_id):
-#     article = get_object_or_404(Article, pk=article_id)
-#     return render(request, 'detail.html', {'article': article})
 
-# def add_article(request):
-#     if request.POST:
-#         form = NewArticleForm(request.POST)
-#         if form.is_valid():
-#             form.save()
-#             return redirect('index')
-#     else:
-#         form = NewArticleForm()
-#     return render(request, 'add_article.html', {'form': form})
+class LoginFormView(FormView):
+    form_class = AuthenticationForm
+    template_name = 'login.html'
+    success_url = '/'

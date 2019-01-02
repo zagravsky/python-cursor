@@ -1,14 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Articles</title>
-</head>
-<body>
-    {% for article in object_list %}
-    <p><a href="{% url 'detail' article.id %}">{{ article.title }}</a></p>
-    {% endfor %}
-        {% load static %}
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ page_title }}{% endblock %}
+{%  block content %}
+<div class="container">
+    <h2>Articles</h2>
+    <ul>
+        {% for article in object_list %}
+        <li><a href="{% url 'detail' article.id %}">{{ article.title }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
     <img src="{% static 'cat.jpg' %}" alt="funny cat">
-</body>
-</html>
+{% endblock %}
