@@ -43,20 +43,19 @@ METHODS = {
 
 @app.route('/', methods=['POST'])
 def handle():
-
-
-
     try:
         data = json.loads(request.data.decode('utf-8'))
         data.keys()
     except json.decoder.JSONDecodeError:
         return json.dumps({"jsonrpc": "2.0", "error": {"code": -32700, "message": "Parse error"}, "id": None})
     except AttributeError:
-        return json.dumps({"jsonrpc": "2.0", "error": {"code": -32600, "message": "Invalid Request JSON-RPC"}, "id": None})
+        return json.dumps(
+            {"jsonrpc": "2.0", "error": {"code": -32600, "message": "Invalid Request JSON-RPC"}, "id": None})
 
     method_view = METHODS.get(data.get('method'))
     if not method_view:
-        return json.dumps({"jsonrpc": "2.0", "error": {"code": -32601, "message": "Method not found"}, "id": data.get('id')})
+        return json.dumps(
+            {"jsonrpc": "2.0", "error": {"code": -32601, "message": "Method not found"}, "id": data.get('id')})
 
     result = method_view(id=data.get("id"), **data.get("params"))
     return result

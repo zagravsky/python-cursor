@@ -15,16 +15,34 @@ def check_member(name: str) -> bool:
     return name in MEMBERS.keys()
 
 
-def output_DB_members(d: dict):
-    DB_path = os.getcwd() + '/homework/DmytroMelnyk/utils/DB_members.json'
+def output_DB_members(dict_members: dict):
+    """
+    Func that write current states of members to json file
+    Args:
+        dict_members: dict of MEMBERS
+
+    Returns: None
+
+    """
+    DB_path = os.getcwd() + '/utils/DB_members.json'
     with open(DB_path, 'w') as f:
-        json.dump(d, f)
+        json.dump(dict_members, f)
 
 
 @app.route('/dump', methods=['GET'])
 def dumptofile():
+    """
+    Route that will dump current states of members to json file
+    Returns: Text confirmation of success at console
+
+    """
     output_DB_members(MEMBERS)
     return 'Date was wrote to DB_members file'
+
+
+@app.route('/')
+def index():
+    return "<h4>To GET data from DB use route  '/user/name' </h4>"
 
 
 @app.route('/user', methods=['POST'])
@@ -34,9 +52,9 @@ def profile(name=None):
 
     if flask.request.method == 'POST':
         params = json.loads(request.data.decode('utf-8'))
-        MEMBERS[params.get('name')] = params
+        for key, val in params.items():
+            MEMBERS[key] = val
         result = {"status": "OK", "message": f"Add new user {params}"}
-        # output_DB_members(MEMBERS)
 
     if flask.request.method == 'GET':
         member = MEMBERS.get(name)
@@ -64,7 +82,7 @@ def profile(name=None):
 
 
 if __name__ == '__main__':
-    settings_path = os.getcwd() + '/homework/DmytroMelnyk/utils/settings.json'
+    settings_path = os.getcwd() + '/utils/settings.json'
     with open(settings_path) as f:
         data = json.load(f)
         for d in data:
