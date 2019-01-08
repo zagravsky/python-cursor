@@ -9,6 +9,8 @@
         <li><a href="{% url 'detail' article.id %}">{{ article.title }}</a></li>
         {% endfor %}
     </ul>
+    <hr>
+    <a href="{% url 'add_article' %}">Add article</a>
 </div>
     <img src="{% static 'cat.jpg' %}" alt="funny cat">
 {% endblock %}
