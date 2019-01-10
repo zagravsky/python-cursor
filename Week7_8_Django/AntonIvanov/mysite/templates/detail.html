@@ -4,9 +4,9 @@
 <div class="container">
     <h2>{{ article.title }}</h2>
     <p>{{ article.id }}</p>
-    <p>{{ article.title }}</p>
-    <p>{{ article.description }}</p>
+    <p>Title: {{ article.title }}</p>
     <p>Author: {{ article.author }}</p>
+    <p>{{ article.description|safe }}</p>
     <hr>
     <a href="{% url 'index' %}">Home</a>
     {% if user.is_authenticated%}

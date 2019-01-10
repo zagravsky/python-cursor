@@ -1,12 +1,15 @@
 {% extends 'base.html' %}
 {% block title %}Update article{% endblock %}
 {%  block content %}
-<div class="container">
-    <h2>Update article</h2>
-    <form action="{% url 'update_article' form.instance.id %}" method="post">
-        {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Submit">
-    </form>
-</div>
+    <div class="container">
+        <h2>Update article</h2>
+        <form action="{% url 'update_article' form.instance.id %}" method="post">
+            {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Submit">
+        </form>
+    </div>
+    {% load static %}
+    <script type="text/javascript" src="{% static "ckeditor/ckeditor-init.js" %}"></script>
+    <script type="text/javascript" src="{% static "ckeditor/ckeditor/ckeditor.js" %}"></script>
 {% endblock %}

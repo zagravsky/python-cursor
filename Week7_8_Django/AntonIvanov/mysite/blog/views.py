@@ -1,7 +1,8 @@
 from .models import Article
 from .forms import NewArticleForm
 from django.http import HttpResponseRedirect
-from django.views.generic import ListView, DetailView, CreateView, FormView, View, UpdateView, DeleteView
+from django.views.generic import ListView, DetailView, CreateView, FormView,\
+                                View, UpdateView, DeleteView
 from django.urls import reverse
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login, logout

@@ -19,6 +19,7 @@ class ArticleTestCase(TestCase):
         article = Article.objects.get(title='Some Title')
         self.assertEqual(article.author, 'Anton')
 
+
 class ArticleCreateViewTest(TestCase):
 
     # def setUp(self):
@@ -28,7 +29,10 @@ class ArticleCreateViewTest(TestCase):
         """
         Created article saved in database
         """
-        response = self.client.post(reverse('add_article'),
-            {'title': 'Test Title', 'description': 'Test Description', 'author': 'Test Author'}
+        response = self.client.post(reverse('add_article'), {
+                'title': 'Test Title',
+                'description': 'Test Description',
+                'author': 'Test Author'
+            }
         )
         self.assertEqual(response.status_code, 302)
